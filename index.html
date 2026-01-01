@@ -775,6 +775,51 @@
         grid-template-columns: minmax(0, 1fr);
       }
     }
+    .usecases {
+  margin: 100px 0;
+  text-align: center;
+}
+
+.usecases-title {
+  font-size: 28px;
+  margin-bottom: 32px;
+  letter-spacing: -0.02em;
+}
+
+.usecases-slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.usecases-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: scrollUsecases 40s linear infinite;
+}
+
+.usecase-card {
+  flex: 0 0 auto;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 14px 20px;
+  font-size: 15px;
+  color: var(--muted);
+  box-shadow: var(--shadow-soft);
+  white-space: nowrap;
+  transition: transform 0.3s ease;
+}
+
+.usecase-card:hover {
+  transform: scale(1.04);
+}
+
+@keyframes scrollUsecases {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
   </style>
 </head>
 <body>
