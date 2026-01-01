@@ -4,20 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yasyasyas Content Engine – AI Content Automation Platform</title>
-  <meta name="description" content="Yasyasyas Content Engine is an AI-powered content automation platform for building large-scale knowledge bases and encyclopedias across any industry.">
+  <meta name="description" content="Yasyasyas Content Engine automates content creation and knowledge base building across education, healthcare, law, sports, finance and more.">
   <style>
     :root {
       --bg: #ffffff;
-      --text: #111111;
-      --muted: #666666;
-      --border: #e5e5e5;
-      --primary: #2559ff;
-      --primary-soft: #eef3ff;
+      --text: #101827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --primary: #2563eb;
+      --primary-soft: #eef2ff;
       --accent: #111827;
       --radius-lg: 16px;
-      --radius-md: 10px;
-      --radius-sm: 6px;
-      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.13);
+      --radius-md: 12px;
+      --radius-sm: 8px;
+      --shadow-soft: 0 20px 40px rgba(15, 23, 42, 0.10);
       --max-width: 1120px;
     }
 
@@ -62,15 +62,15 @@
     }
 
     .logo-mark {
-      width: 28px;
-      height: 28px;
-      border-radius: 9px;
-      background: radial-gradient(circle at 10% 0%, #3b82f6 0, #111827 60%);
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+      background: radial-gradient(circle at 10% 0%, #60a5fa 0, #111827 60%);
     }
 
     .logo-text {
       font-weight: 600;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.04em;
       font-size: 16px;
     }
 
@@ -111,6 +111,7 @@
       gap: 6px;
       background: transparent;
       color: inherit;
+      white-space: nowrap;
     }
 
     .btn-outline {
@@ -126,14 +127,14 @@
       background: var(--primary);
       color: #ffffff;
       border-color: var(--primary);
-      box-shadow: 0 14px 30px rgba(37, 89, 255, 0.35);
+      box-shadow: 0 16px 36px rgba(37, 99, 235, 0.30);
     }
 
     .btn-primary:hover {
-      background: #1e46cc;
-      border-color: #1e46cc;
+      background: #1d4ed8;
+      border-color: #1d4ed8;
       transform: translateY(-1px);
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.25);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.22);
     }
 
     /* Hero */
@@ -148,14 +149,14 @@
     .hero-kicker {
       font-size: 13px;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       color: var(--muted);
       margin-bottom: 12px;
     }
 
     .hero-title {
       font-size: clamp(32px, 4vw, 40px);
-      line-height: 1.1;
+      line-height: 1.08;
       margin-bottom: 16px;
       letter-spacing: -0.03em;
     }
@@ -169,7 +170,7 @@
     .hero-subtitle {
       font-size: 15px;
       color: var(--muted);
-      max-width: 460px;
+      max-width: 480px;
       margin-bottom: 22px;
     }
 
@@ -182,7 +183,7 @@
 
     .hero-badge {
       font-size: 12px;
-      padding: 6px 10px;
+      padding: 6px 11px;
       border-radius: 999px;
       border: 1px solid var(--border);
       color: var(--muted);
@@ -194,7 +195,7 @@
       flex-wrap: wrap;
       gap: 12px;
       align-items: center;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
     .hero-note {
@@ -235,7 +236,7 @@
       border-radius: var(--radius-md);
       border: 1px solid var(--border);
       padding: 12px 12px 11px;
-      background: #fafafa;
+      background: #f9fafb;
       position: relative;
       overflow: hidden;
     }
@@ -283,7 +284,7 @@
       background: #22c55e;
     }
 
-    /* Sections */
+    /* Generic sections */
     .section {
       margin-bottom: 56px;
     }
@@ -305,7 +306,7 @@
     .section-subtitle {
       font-size: 13px;
       color: var(--muted);
-      max-width: 420px;
+      max-width: 460px;
     }
 
     .section-tag {
@@ -316,6 +317,7 @@
       margin-bottom: 6px;
     }
 
+    /* Features */
     .features-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -345,11 +347,53 @@
       color: var(--muted);
     }
 
-    /* USE CASES SLIDER */
+    /* Who it's for */
+    .who-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .who-card {
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: #f9fafb;
+      padding: 14px 14px 12px;
+    }
+
+    .who-card h3 {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .who-card p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .who-card ul {
+      list-style: none;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .who-card li {
+      margin-bottom: 4px;
+      display: flex;
+      gap: 6px;
+    }
+
+    .who-card li::before {
+      content: "–";
+      color: var(--muted);
+    }
+
+    /* Use cases slider */
     .usecases-wrapper {
       border-radius: var(--radius-lg);
       border: 1px solid var(--border);
-      background: #fafafa;
+      background: #f9fafb;
       padding: 18px 18px 16px;
     }
 
@@ -364,14 +408,8 @@
       position: absolute;
       inset: 0;
       opacity: 0;
-      transition: opacity 0.6s ease;
-      padding-right: 6px;
-    }
-
-    .usecase-title {
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 4px;
+      transition: opacity 0.5s ease;
+      padding-right: 4px;
     }
 
     .usecase-label {
@@ -380,6 +418,12 @@
       letter-spacing: 0.12em;
       color: var(--muted);
       margin-bottom: 4px;
+    }
+
+    .usecase-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 5px;
     }
 
     .usecase-desc {
@@ -401,16 +445,16 @@
     }
 
     .usecase-list li::before {
-      content: "–";
+      content: "·";
       color: var(--muted);
+      font-size: 14px;
+      line-height: 1;
     }
 
-    /* Slider inputs */
     .usecase-input {
       display: none;
     }
 
-    /* Navigation dots */
     .usecase-dots {
       display: flex;
       flex-wrap: wrap;
@@ -428,7 +472,7 @@
       transition: all 0.16s ease-out;
     }
 
-    /* Active slide via radio */
+    /* Active slide */
     #uc-1:checked ~ .usecases-inner .slide-1,
     #uc-2:checked ~ .usecases-inner .slide-2,
     #uc-3:checked ~ .usecases-inner .slide-3,
@@ -486,10 +530,48 @@
       transform: scale(1.05);
     }
 
-    /* Simple auto-play effect using animation on container (fade between slides) */
-    @keyframes usecase-cycle {
-      0% { opacity: 1; }
-      100% { opacity: 1; }
+    /* Why this works / Vision */
+    .why-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+      gap: 18px;
+    }
+
+    .why-card {
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      padding: 14px 14px 12px;
+      background: #ffffff;
+    }
+
+    .why-card h3 {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .why-card p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .why-card ul {
+      list-style: none;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .why-card li {
+      margin-bottom: 4px;
+      display: flex;
+      gap: 6px;
+    }
+
+    .why-card li::before {
+      content: "•";
+      color: #16a34a;
+      font-size: 13px;
+      line-height: 1;
     }
 
     /* Pricing */
@@ -510,6 +592,7 @@
       border-color: var(--primary);
       box-shadow: var(--shadow-soft);
       position: relative;
+      background: radial-gradient(circle at top left, #eff6ff 0, #ffffff 45%);
     }
 
     .plan-badge {
@@ -520,7 +603,7 @@
       text-transform: uppercase;
       letter-spacing: 0.12em;
       color: #1d4ed8;
-      background: #eef2ff;
+      background: #e0ebff;
       padding: 4px 8px;
       border-radius: 999px;
     }
@@ -582,6 +665,12 @@
       margin-top: 2px;
     }
 
+    .plan-muted-note {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
     /* CTA */
     .cta {
       border-radius: var(--radius-lg);
@@ -591,7 +680,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 16px;
-      background: #fafafa;
+      background: #f9fafb;
     }
 
     .cta-main {
@@ -652,7 +741,9 @@
         align-items: flex-start;
       }
       .features-grid,
-      .pricing-grid {
+      .pricing-grid,
+      .who-grid,
+      .why-grid {
         grid-template-columns: minmax(0, 1fr);
       }
       .cta {
@@ -663,7 +754,7 @@
         flex-direction: column;
       }
       .usecases-inner {
-        min-height: 200px;
+        min-height: 210px;
       }
     }
 
@@ -699,6 +790,7 @@
       <nav>
         <div class="nav-links">
           <a href="#features">Features</a>
+          <a href="#who">Who it's for</a>
           <a href="#use-cases">Use cases</a>
           <a href="#pricing">Pricing</a>
         </div>
@@ -712,58 +804,58 @@
     <!-- HERO -->
     <section class="hero">
       <div>
-        <div class="hero-kicker">AI content automation platform</div>
+        <div class="hero-kicker">AI content automation</div>
         <h1 class="hero-title">
-          Build <span>large-scale knowledge engines</span> with AI, not spreadsheets.
+          Turn ideas into <span>living knowledge bases</span> in days, not months.
         </h1>
         <p class="hero-subtitle">
-          Yasyasyas Content Engine automates your entire content pipeline — from idea and structure
-          to fully written, ready-to-publish encyclopedic content across any domain.
+          Yasyasyas Content Engine helps you plan, write and organize content for blogs, courses,
+          knowledge bases and full encyclopedias — without drowning in documents and spreadsheets.
         </p>
 
         <div class="hero-badges">
-          <div class="hero-badge">From single articles to full encyclopedias</div>
-          <div class="hero-badge">Built for knowledge-heavy industries</div>
-          <div class="hero-badge">No-code workflows, API-ready</div>
+          <div class="hero-badge">For creators, teams & organizations</div>
+          <div class="hero-badge">From single posts to full encyclopedias</div>
+          <div class="hero-badge">Works across any industry</div>
         </div>
 
         <div class="hero-actions">
           <button class="btn btn-primary">Start free trial</button>
-          <button class="btn btn-outline">Watch 2‑minute demo</button>
+          <button class="btn btn-outline">See example projects</button>
         </div>
         <div class="hero-note">
-          <strong>Ultimate plan:</strong> Generate and manage complete encyclopedic portals with millions of words of structured knowledge.
+          <strong>Investors’ angle:</strong> a reusable AI engine for building knowledge portals in education, medicine,
+          law, sports, travel, finance and more — on subscription.
         </div>
       </div>
 
       <div class="hero-demo-card" id="demo">
-        <div class="demo-label">Live demo · Content workflow</div>
+        <div class="demo-label">Quick example · From idea to structure</div>
         <div class="demo-columns">
           <div class="demo-box">
             <div class="demo-tag">Input</div>
-            <h4>Prompt</h4>
+            <h4>What you ask for</h4>
             <div class="demo-code">
-Create a full knowledge structure and content plan
-for an online encyclopedia about photography:
+"Create an online knowledge hub about photography:
 
-• 12 main categories
-• 100+ subtopics
-• SEO‑ready titles
-• Learning path for beginners to experts
+• sections for gear, lighting, genres, editing
+• beginner to advanced learning path
+• 100+ article ideas
+• SEO‑friendly titles"
             </div>
           </div>
           <div class="demo-box">
             <div class="demo-tag">Output</div>
-            <h4>AI‑generated structure</h4>
+            <h4>What you get</h4>
             <div class="demo-code">
-✓ 12 categories (gear, lighting, genres, editing, history...)
-✓ 128 article blueprints with key points
+✓ Clear sitemap with categories & tags
+✓ 120 article blueprints with key points
 ✓ Suggested internal linking structure
-✓ Export: Markdown, WordPress, JSON
+✓ Export to WordPress, Markdown or JSON
             </div>
             <div class="demo-highlight">
               <span class="dot"></span>
-              60 seconds · No manual outlining
+              One prompt · One minute · Full outline
             </div>
           </div>
         </div>
@@ -774,39 +866,82 @@ for an online encyclopedia about photography:
     <section class="section" id="features">
       <div class="section-header">
         <div>
-          <div class="section-tag">Capabilities</div>
-          <h2 class="section-title">From single workflows to entire knowledge ecosystems.</h2>
+          <div class="section-tag">What it does</div>
+          <h2 class="section-title">Everything you need to turn content into a system.</h2>
         </div>
         <p class="section-subtitle">
-          Use Yasyasyas Content Engine to design, generate and maintain living knowledge bases —
-          from topic clusters and pillar pages to fully‑fledged encyclopedic portals across domains.
+          Yasyasyas Content Engine is not just a text generator. It is a workflow layer on top of AI
+          that helps you plan, write, organize and export content as real, reusable knowledge.
         </p>
       </div>
 
       <div class="features-grid">
         <div class="feature">
-          <h3>Structured knowledge generation</h3>
+          <h3>Plan the knowledge</h3>
           <p>
-            Generate complete content architectures: categories, subtopics, article blueprints,
-            internal links and learning paths for any domain or industry.
+            Ask for a topic and get a full structure: sections, subpages, article ideas, learning paths
+            and cross‑links.
           </p>
-          <span>Perfect for education, healthcare, law, finance, sports and more.</span>
+          <span>Perfect for portals, courses, academies and documentation.</span>
         </div>
         <div class="feature">
-          <h3>Automated content workflows</h3>
+          <h3>Generate the content</h3>
           <p>
-            Build reusable AI workflows that go from outline to fully written, revised
-            and formatted content ready for publishing in your stack.
+            Turn outlines into ready‑to‑edit drafts in your tone of voice, with consistent structure
+            and style.
           </p>
-          <span>Combine prompts, rules, tone presets and quality checks in one flow.</span>
+          <span>From short explainers to long‑form guides and encyclopedic entries.</span>
         </div>
         <div class="feature">
-          <h3>Multi‑channel exports</h3>
+          <h3>Publish where you work</h3>
           <p>
-            Export content to your existing systems: CMS, docs, internal wikis or static sites
-            with a single click.
+            Export everything to your tools: CMS, docs, wikis or static sites — without copy‑paste chaos.
           </p>
-          <span>WordPress, Markdown, JSON, HTML and more (API in higher plans).</span>
+          <span>WordPress, Markdown, HTML, JSON and more (API in higher plans).</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO IT'S FOR -->
+    <section class="section" id="who">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">Who it's for</div>
+          <h2 class="section-title">Simple enough for creators. Strong enough for investors.</h2>
+        </div>
+        <p class="section-subtitle">
+          Yasyasyas Content Engine is built for people who think in knowledge, not just posts:
+          solo creators, small teams and organizations building serious content assets.
+        </p>
+      </div>
+
+      <div class="who-grid">
+        <div class="who-card">
+          <h3>Creators & educators</h3>
+          <p>For people who want to publish more, without burning out on planning and structure.</p>
+          <ul>
+            <li>Online courses and academies</li>
+            <li>Expert blogs and newsletters</li>
+            <li>Educational portals for schools and NGOs</li>
+          </ul>
+        </div>
+        <div class="who-card">
+          <h3>Teams & companies</h3>
+          <p>For teams that need one place for content, documentation and reusable knowledge.</p>
+          <ul>
+            <li>Marketing and content teams</li>
+            <li>Product and support documentation</li>
+            <li>Internal knowledge bases and playbooks</li>
+          </ul>
+        </div>
+        <div class="who-card">
+          <h3>Platforms & investors</h3>
+          <p>For people who think in terms of assets, multiples and scalable infrastructure.</p>
+          <ul>
+            <li>AI‑powered vertical portals and SaaS add‑ons</li>
+            <li>White‑label knowledge engines for industries</li>
+            <li>Recurring revenue from content automation</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -816,16 +951,16 @@ for an online encyclopedia about photography:
       <div class="section-header">
         <div>
           <div class="section-tag">Use cases</div>
-          <h2 class="section-title">Designed for knowledge‑heavy, high‑trust industries.</h2>
+          <h2 class="section-title">One engine. Content for almost any field.</h2>
         </div>
         <p class="section-subtitle">
-          Yasyasyas Content Engine adapts to the structure, language and depth required in each domain —
-          from education and medicine to law, sports, travel, finance, technology and beyond.
+          The same engine can power portals in education, medicine, sport, law, travel, art, finance,
+          technology and dozens of other domains. You decide where to deploy it.
         </p>
       </div>
 
       <div class="usecases-wrapper">
-        <!-- Radio inputs for manual selection -->
+        <!-- Radio inputs -->
         <input type="radio" name="usecases" id="uc-1" class="usecase-input" checked />
         <input type="radio" name="usecases" id="uc-2" class="usecase-input" />
         <input type="radio" name="usecases" id="uc-3" class="usecase-input" />
@@ -855,15 +990,14 @@ for an online encyclopedia about photography:
           <!-- 1 Education -->
           <div class="usecase-slide slide-1">
             <div class="usecase-label">Education</div>
-            <div class="usecase-title">Educational portals & learning paths</div>
+            <div class="usecase-title">Courses, portals and school content</div>
             <p class="usecase-desc">
-              Automatically generate curricula, topic clusters, lesson structures and learning paths
-              for schools, universities and online education platforms.
+              Build subject portals, online academies and curricula for schools and training companies.
             </p>
             <ul class="usecase-list">
-              <li>Full subject maps (physics, history, languages, IT)</li>
-              <li>Module → lesson → exercise structures</li>
-              <li>Exportable to LMS, docs and internal wikis</li>
+              <li>Subject maps and lesson paths</li>
+              <li>Exercises and explanations by level</li>
+              <li>Exports for LMS and learning portals</li>
             </ul>
           </div>
 
@@ -872,445 +1006,74 @@ for an online encyclopedia about photography:
             <div class="usecase-label">Healthcare · Medicine</div>
             <div class="usecase-title">Medical knowledge & patient education</div>
             <p class="usecase-desc">
-              Build structured medical knowledge bases and patient‑friendly explanations – from anatomy and
-              conditions to procedures and preparation guides.
+              Explain complex topics in plain language for portals, clinics and education.
             </p>
             <ul class="usecase-list">
-              <li>Content architectures for medical portals</li>
-              <li>Patient education libraries (non‑diagnostic)</li>
-              <li>Multi‑level explanations for different audiences</li>
+              <li>Condition and procedure overviews</li>
+              <li>Patient‑friendly explanations (non‑diagnostic)</li>
+              <li>Structured libraries for portals</li>
             </ul>
           </div>
 
           <!-- 3 Sports -->
           <div class="usecase-slide slide-3">
             <div class="usecase-label">Sports</div>
-            <div class="usecase-title">Sports encyclopedias & training hubs</div>
+            <div class="usecase-title">Clubs, leagues and training hubs</div>
             <p class="usecase-desc">
-              Create deep, organized content about disciplines, tactics, training methods, athletes and
-              historical data across any sport.
+              Document tactics, training, athletes and history in one consistent knowledge base.
             </p>
             <ul class="usecase-list">
-              <li>Portals for specific sports, leagues or clubs</li>
-              <li>Player profiles, tactics and training frameworks</li>
-              <li>Publishing‑ready structures for blogs and media</li>
+              <li>Portals for clubs and federations</li>
+              <li>Training and tactics libraries</li>
+              <li>Player and team profiles</li>
             </ul>
           </div>
 
           <!-- 4 Law -->
           <div class="usecase-slide slide-4">
             <div class="usecase-label">Law · Legal</div>
-            <div class="usecase-title">Legal knowledge, glossaries & commentary</div>
+            <div class="usecase-title">Glossaries, commentary & guides</div>
             <p class="usecase-desc">
-              Organise statutes, case law, commentary and definitions into navigable, structured legal knowledge
-              portals and glossaries.
+              Make legal information easier to navigate for firms, students and clients.
             </p>
             <ul class="usecase-list">
-              <li>Act → chapter → article → commentary hierarchies</li>
-              <li>Glossaries of legal terms and concepts</li>
-              <li>Knowledge hubs for firms, students and clients</li>
+              <li>Legal term glossaries</li>
+              <li>Guides and explainers by topic</li>
+              <li>Internal knowledge hubs for firms</li>
             </ul>
           </div>
 
           <!-- 5 Finance -->
           <div class="usecase-slide slide-5">
             <div class="usecase-label">Finance · Banking</div>
-            <div class="usecase-title">Financial guides & knowledge libraries</div>
+            <div class="usecase-title">Money, investing & product explainers</div>
             <p class="usecase-desc">
-              Build comprehensive content around personal finance, investing, banking products and
-              complex financial instruments.
+              Teach people how money, products and risk really work — with structure.
             </p>
             <ul class="usecase-list">
-              <li>Investor education portals and glossaries</li>
-              <li>Product comparison and explainer content</li>
-              <li>Internal knowledge bases for advisors</li>
+              <li>Investor education portals</li>
+              <li>Banking product explainers</li>
+              <li>Internal knowledge for advisors</li>
             </ul>
           </div>
 
           <!-- 6 HR -->
           <div class="usecase-slide slide-6">
             <div class="usecase-label">HR · Recruitment</div>
-            <div class="usecase-title">Talent, roles & competency libraries</div>
+            <div class="usecase-title">Roles, skills & career paths</div>
             <p class="usecase-desc">
-              Structure and generate content for job families, roles, competencies and learning paths
-              across an entire organization.
+              Align job descriptions, skills and development paths across the whole company.
             </p>
             <ul class="usecase-list">
-              <li>Role profiles, responsibilities and skill matrices</li>
-              <li>Career path and development content</li>
-              <li>Reusable templates for HR documentation</li>
+              <li>Role and skill libraries</li>
+              <li>Career path content</li>
+              <li>Reusable templates for HR</li>
             </ul>
           </div>
 
           <!-- 7 Travel -->
           <div class="usecase-slide slide-7">
             <div class="usecase-label">Travel · Tourism</div>
-            <div class="usecase-title">Destination guides & travel encyclopedias</div>
+            <div class="usecase-title">Destinations, guides & experiences</div>
             <p class="usecase-desc">
-              Create rich travel portals with structured information about destinations, routes,
-              attractions, culture and logistics.
-            </p>
-            <ul class="usecase-list">
-              <li>Country, region and city knowledge hubs</li>
-              <li>Thematic routes and experience collections</li>
-              <li>Exportable content for blogs and booking sites</li>
-            </ul>
-          </div>
-
-          <!-- 8 Technology -->
-          <div class="usecase-slide slide-8">
-            <div class="usecase-label">Technology · IT</div>
-            <div class="usecase-title">Documentation, glossaries & tutorials</div>
-            <p class="usecase-desc">
-              Automate documentation for software, APIs, frameworks and IT processes with consistent
-              structures and terminology.
-            </p>
-            <ul class="usecase-list">
-              <li>Developer and user documentation libraries</li>
-              <li>Concept glossaries and reference guides</li>
-              <li>Step‑by‑step tutorial series and FAQs</li>
-            </ul>
-          </div>
-
-          <!-- 9 Art -->
-          <div class="usecase-slide slide-9">
-            <div class="usecase-label">Art · Culture</div>
-            <div class="usecase-title">Art history & creative encyclopedias</div>
-            <p class="usecase-desc">
-              Generate structured content around art movements, artists, techniques, periods and cultural contexts.
-            </p>
-            <ul class="usecase-list">
-              <li>Encyclopedias of art styles and schools</li>
-              <li>Artist profiles and work overviews</li>
-              <li>Contextual timelines and thematic journeys</li>
-            </ul>
-          </div>
-
-          <!-- 10 Geography -->
-          <div class="usecase-slide slide-10">
-            <div class="usecase-label">Geography · Earth sciences</div>
-            <div class="usecase-title">World, regions & natural systems</div>
-            <p class="usecase-desc">
-              Build knowledge bases about countries, regions, climates, geology and environmental systems.
-            </p>
-            <ul class="usecase-list">
-              <li>Country and region fact libraries</li>
-              <li>Physical and human geography overviews</li>
-              <li>Education‑ready map‑linked content</li>
-            </ul>
-          </div>
-
-          <!-- 11 Sailing -->
-          <div class="usecase-slide slide-11">
-            <div class="usecase-label">Sailing · Nautical</div>
-            <div class="usecase-title">Sailing knowledge & safety guides</div>
-            <p class="usecase-desc">
-              Create structured knowledge for sailing theory, practice, safety procedures and vessel types.
-            </p>
-            <ul class="usecase-list">
-              <li>Manoeuvres, rules and navigation basics</li>
-              <li>Equipment, maintenance and checklists</li>
-              <li>Training materials for courses and clubs</li>
-            </ul>
-          </div>
-
-          <!-- 12 Music -->
-          <div class="usecase-slide slide-12">
-            <div class="usecase-label">Music · Audio</div>
-            <div class="usecase-title">Music encyclopedias & production guides</div>
-            <p class="usecase-desc">
-              Generate knowledge structures about genres, instruments, theory, history and audio production workflows.
-            </p>
-            <ul class="usecase-list">
-              <li>Genre and era overviews with examples</li>
-              <li>Instrument techniques and practice paths</li>
-              <li>Recording, mixing and mastering guides</li>
-            </ul>
-          </div>
-
-          <!-- 13 Automotive -->
-          <div class="usecase-slide slide-13">
-            <div class="usecase-label">Automotive</div>
-            <div class="usecase-title">Vehicles, technology & maintenance</div>
-            <p class="usecase-desc">
-              Build content around car models, technologies, maintenance, driving techniques and industry trends.
-            </p>
-            <ul class="usecase-list">
-              <li>Model and generation encyclopedias</li>
-              <li>Maintenance and troubleshooting libraries</li>
-              <li>EV, hybrid and emerging tech guides</li>
-            </ul>
-          </div>
-
-          <!-- 14 Real estate -->
-          <div class="usecase-slide slide-14">
-            <div class="usecase-label">Real estate</div>
-            <div class="usecase-title">Property, markets & investment guides</div>
-            <p class="usecase-desc">
-              Generate structured content for buyers, sellers, investors and tenants across markets and asset classes.
-            </p>
-            <ul class="usecase-list">
-              <li>Explainers for processes and regulations</li>
-              <li>Market knowledge and location overviews</li>
-              <li>Knowledge bases for agencies and portals</li>
-            </ul>
-          </div>
-
-          <!-- 15 Food & Nutrition -->
-          <div class="usecase-slide slide-15">
-            <div class="usecase-label">Food · Nutrition</div>
-            <div class="usecase-title">Food encyclopedias & nutrition guides</div>
-            <p class="usecase-desc">
-              Structure knowledge around ingredients, cuisines, techniques, nutrition and dietary patterns.
-            </p>
-            <ul class="usecase-list">
-              <li>Ingredient and recipe knowledge hubs</li>
-              <li>Nutrition and dietary pattern overviews</li>
-              <li>Educational content for health & cooking</li>
-            </ul>
-          </div>
-
-          <!-- 16 Psychology -->
-          <div class="usecase-slide slide-16">
-            <div class="usecase-label">Psychology</div>
-            <div class="usecase-title">Concepts, theories & educational content</div>
-            <p class="usecase-desc">
-              Build structured psychology knowledge bases for education, training and public understanding.
-            </p>
-            <ul class="usecase-list">
-              <li>Themes, theories and key figures</li>
-              <li>Glossaries and concept maps</li>
-              <li>Non‑clinical educational explanations</li>
-            </ul>
-          </div>
-
-          <!-- 17 History -->
-          <div class="usecase-slide slide-17">
-            <div class="usecase-label">History</div>
-            <div class="usecase-title">Timelines, eras & event networks</div>
-            <p class="usecase-desc">
-              Generate structured narratives of periods, themes, regions and key events in world history.
-            </p>
-            <ul class="usecase-list">
-              <li>Chronological and thematic overviews</li>
-              <li>Biographies and key event deep‑dives</li>
-              <li>Education‑ready content for curricula</li>
-            </ul>
-          </div>
-
-          <!-- 18 Fashion -->
-          <div class="usecase-slide slide-18">
-            <div class="usecase-label">Fashion</div>
-            <div class="usecase-title">Styles, brands & trend archives</div>
-            <p class="usecase-desc">
-              Build encyclopedias of designers, brands, styles, materials and fashion history.
-            </p>
-            <ul class="usecase-list">
-              <li>Designer and brand profiles</li>
-              <li>Style, era and trend overviews</li>
-              <li>Glossaries for materials and techniques</li>
-            </ul>
-          </div>
-
-          <!-- 19 Aviation -->
-          <div class="usecase-slide slide-19">
-            <div class="usecase-label">Aviation</div>
-            <div class="usecase-title">Aircraft, procedures & aviation knowledge</div>
-            <p class="usecase-desc">
-              Create knowledge bases for aircraft types, aviation procedures, safety and navigation basics.
-            </p>
-            <ul class="usecase-list">
-              <li>Aircraft and system overviews</li>
-              <li>Operational concepts and terminology</li>
-              <li>Training-ready theory content</li>
-            </ul>
-          </div>
-
-          <!-- 20 Architecture -->
-          <div class="usecase-slide slide-20">
-            <div class="usecase-label">Architecture</div>
-            <div class="usecase-title">Styles, projects & technical concepts</div>
-            <p class="usecase-desc">
-              Generate structured content on architectural history, styles, methods and exemplary projects.
-            </p>
-            <ul class="usecase-list">
-              <li>Style and period encyclopedias</li>
-              <li>Project case studies and typologies</li>
-              <li>Glossaries for design and construction</li>
-            </ul>
-          </div>
-
-          <!-- 21 Gaming -->
-          <div class="usecase-slide slide-21">
-            <div class="usecase-label">Gaming</div>
-            <div class="usecase-title">Game universes, guides & lore</div>
-            <p class="usecase-desc">
-              Build structured game encyclopedias, wikis, guides and lore libraries for players and communities.
-            </p>
-            <ul class="usecase-list">
-              <li>Game mechanics and system overviews</li>
-              <li>Character, item and world encyclopedias</li>
-              <li>Guides, walkthroughs and strategy hubs</li>
-            </ul>
-          </div>
-
-          <!-- 22 Agriculture -->
-          <div class="usecase-slide slide-22">
-            <div class="usecase-label">Agriculture</div>
-            <div class="usecase-title">Crops, methods & knowledge hubs</div>
-            <p class="usecase-desc">
-              Create content around crops, techniques, equipment and sustainable agriculture practices.
-            </p>
-            <ul class="usecase-list">
-              <li>Crop and soil knowledge bases</li>
-              <li>Farming method and equipment guides</li>
-              <li>Education for producers and advisors</li>
-            </ul>
-          </div>
-
-          <!-- 23 Marine biology -->
-          <div class="usecase-slide slide-23">
-            <div class="usecase-label">Marine biology</div>
-            <div class="usecase-title">Oceans, species & ecosystems</div>
-            <p class="usecase-desc">
-              Build structured content around marine ecosystems, species, habitats and research findings.
-            </p>
-            <ul class="usecase-list">
-              <li>Species and habitat encyclopedias</li>
-              <li>Ecosystem and process overviews</li>
-              <li>Outreach and education content</li>
-            </ul>
-          </div>
-
-          <!-- 24 Astronomy -->
-          <div class="usecase-slide slide-24">
-            <div class="usecase-label">Astronomy</div>
-            <div class="usecase-title">Universe, objects & observation</div>
-            <p class="usecase-desc">
-              Generate knowledge structures around celestial objects, cosmology, observation methods and missions.
-            </p>
-            <ul class="usecase-list">
-              <li>Objects, systems and phenomena encyclopedias</li>
-              <li>Mission and instrumentation overviews</li>
-              <li>Public outreach and education portals</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="usecase-dots">
-          <label for="uc-1" class="usecase-dot"></label>
-          <label for="uc-2" class="usecase-dot"></label>
-          <label for="uc-3" class="usecase-dot"></label>
-          <label for="uc-4" class="usecase-dot"></label>
-          <label for="uc-5" class="usecase-dot"></label>
-          <label for="uc-6" class="usecase-dot"></label>
-          <label for="uc-7" class="usecase-dot"></label>
-          <label for="uc-8" class="usecase-dot"></label>
-          <label for="uc-9" class="usecase-dot"></label>
-          <label for="uc-10" class="usecase-dot"></label>
-          <label for="uc-11" class="usecase-dot"></label>
-          <label for="uc-12" class="usecase-dot"></label>
-          <label for="uc-13" class="usecase-dot"></label>
-          <label for="uc-14" class="usecase-dot"></label>
-          <label for="uc-15" class="usecase-dot"></label>
-          <label for="uc-16" class="usecase-dot"></label>
-          <label for="uc-17" class="usecase-dot"></label>
-          <label for="uc-18" class="usecase-dot"></label>
-          <label for="uc-19" class="usecase-dot"></label>
-          <label for="uc-20" class="usecase-dot"></label>
-          <label for="uc-21" class="usecase-dot"></label>
-          <label for="uc-22" class="usecase-dot"></label>
-          <label for="uc-23" class="usecase-dot"></label>
-          <label for="uc-24" class="usecase-dot"></label>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRICING -->
-    <section class="section" id="pricing">
-      <div class="section-header">
-        <div>
-          <div class="section-tag">Plans</div>
-          <h2 class="section-title">Start small. Scale to full encyclopedias.</h2>
-        </div>
-        <p class="section-subtitle">
-          Choose a plan that fits your content ambitions. Upgrade when you are ready to build
-          large‑scale knowledge engines for your brand, clients or entire industries.
-        </p>
-      </div>
-
-      <div class="pricing-grid">
-        <div class="plan">
-          <div class="plan-name">Starter</div>
-          <div class="plan-desc">For individuals testing AI‑assisted content workflows.</div>
-          <div class="plan-price">$19 <span>/ month</span></div>
-          <div class="plan-limit">Up to 20 000 AI‑generated words / month.</div>
-          <ul>
-            <li>Basic content generation workflows</li>
-            <li>Up to 10 saved workflows</li>
-            <li>Single‑user workspace</li>
-            <li>Export to Markdown & HTML</li>
-          </ul>
-          <button class="btn btn-outline">Start with Starter</button>
-        </div>
-
-        <div class="plan highlight">
-          <div class="plan-badge">Most popular</div>
-          <div class="plan-name">Pro</div>
-          <div class="plan-desc">For teams building serious content engines.</div>
-          <div class="plan-price">$79 <span>/ month</span></div>
-          <div class="plan-limit">Up to 150 000 AI‑generated words / month.</div>
-          <ul>
-            <li>Unlimited workflows & projects</li>
-            <li>Advanced templates & tone presets</li>
-            <li>Team collaboration</li>
-            <li>WordPress & CMS‑friendly exports</li>
-          </ul>
-          <button class="btn btn-primary">Start with Pro</button>
-        </div>
-
-        <div class="plan">
-          <div class="plan-name">Ultimate · Encyclopedia Builder</div>
-          <div class="plan-desc">For organizations building full encyclopedic portals.</div>
-          <div class="plan-price">Custom <span>/ month</span></div>
-          <div class="plan-limit">From 1 000 000 AI‑generated words / month and beyond.</div>
-          <ul>
-            <li>Encyclopedia‑scale content architectures</li>
-            <li>Domain‑specific knowledge models</li>
-            <li>API access & custom workflows</li>
-            <li>Priority support & onboarding</li>
-          </ul>
-          <button class="btn btn-outline">Talk to sales</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta">
-      <div>
-        <div class="cta-main">Ready to build your first AI‑powered knowledge engine?</div>
-        <div class="cta-sub">
-          Start with a simple workflow, or book a session to see how Yasyasyas Content Engine
-          can power full encyclopedic portals in education, medicine, sports, travel, finance,
-          technology and beyond.
-        </div>
-      </div>
-      <div class="cta-actions">
-        <button class="btn btn-primary">Start free trial</button>
-        <button class="btn btn-outline">Book a live demo</button>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div>© <span id="year"></span> Yasyasyas Content Engine. All rights reserved.</div>
-    <div>
-      <a href="#">Terms</a> · <a href="#">Privacy</a> · <a href="#">Contact</a>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+              Create
