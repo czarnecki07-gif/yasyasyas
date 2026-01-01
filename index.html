@@ -139,11 +139,11 @@
 
     /* Hero */
     .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 40px;
-      align-items: center;
-      margin-bottom: 64px;
+      display: grid; 
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); 
+      gap: 48px; 
+      align-items: center; 
+      margin-bottom: 80px;
     }
 
     .hero-kicker {
@@ -151,13 +151,13 @@
       text-transform: uppercase;
       letter-spacing: 0.14em;
       color: var(--muted);
-      margin-bottom: 12px;
+      margin-bottom: 12px; 
     }
 
     .hero-title {
-      font-size: clamp(32px, 4vw, 40px);
+      font-size: clamp(34px, 4vw, 44px);
       line-height: 1.08;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
       letter-spacing: -0.03em;
     }
 
@@ -168,10 +168,10 @@
     }
 
     .hero-subtitle {
-      font-size: 15px;
+      font-size: 16px;
       color: var(--muted);
-      max-width: 480px;
-      margin-bottom: 22px;
+      max-width: 520px;
+      margin-bottom: 26px;
     }
 
     .hero-badges {
@@ -192,16 +192,26 @@
 
     .hero-actions {
       display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-      margin-bottom: 12px;
+      gap: 14px;
+      margin-bottom: 16px;
     }
 
     .hero-note {
-      font-size: 12px;
+      font-size: 13px;
       color: var(--muted);
     }
+    .hero-demo { 
+      display: grid; 
+      gap: 16px; 
+    }
+    
+    .demo-box {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-soft);
+      }
 
     .hero-note strong {
       color: var(--text);
@@ -219,26 +229,16 @@
 
     .demo-label {
       font-size: 11px;
-      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.12em;
       color: var(--muted);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .demo-columns {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
       gap: 16px;
-    }
-
-    .demo-box {
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border);
-      padding: 12px 12px 11px;
-      background: #f9fafb;
-      position: relative;
-      overflow: hidden;
     }
 
     .demo-box h4 {
@@ -249,8 +249,8 @@
     }
 
     .demo-code {
-      font-family: "SF Mono", ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size: 11px;
+      font-family: ui-monospace, monospace;      
+      font-size: 12px;
       color: var(--muted);
       white-space: pre-line;
     }
