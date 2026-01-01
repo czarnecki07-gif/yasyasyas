@@ -877,6 +877,45 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+.audience {
+  margin: 96px 0 72px;
+  padding: 0 24px;
+}
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.audience-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  box-shadow: var(--shadow-soft);
+  text-align: left;
+  min-height: 200px;
+}
+
+.audience-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.audience-card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .audience-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
   </style>
 </head>
