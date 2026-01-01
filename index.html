@@ -802,80 +802,53 @@
     </header>
 
     <!-- HERO -->
- .hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  gap: 48px;
-  align-items: center;
-  margin-bottom: 80px;
-}
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-kicker">AI content automation</div>
 
-.hero-kicker {
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--muted);
-  margin-bottom: 12px;
-}
+    <h1 class="hero-title">
+      Build <span>living knowledge bases</span> without complexity.
+    </h1>
 
-.hero-title {
-  font-size: clamp(34px, 4vw, 44px);
-  line-height: 1.08;
-  margin-bottom: 18px;
-  letter-spacing: -0.03em;
-}
+    <p class="hero-subtitle">
+      Yasyasyas Content Engine helps you turn ideas into structured, ready‑to‑publish content:
+      articles, guides, courses, documentation and full encyclopedias — all in one place.
+    </p>
 
-.hero-title span {
-  background: linear-gradient(120deg, #2563eb, #111827);
-  -webkit-background-clip: text;
-  color: transparent;
-}
+    <div class="hero-actions">
+      <button class="btn btn-primary">Start free trial</button>
+      <button class="btn btn-outline">See example projects</button>
+    </div>
 
-.hero-subtitle {
-  font-size: 16px;
-  color: var(--muted);
-  max-width: 520px;
-  margin-bottom: 26px;
-}
+    <div class="hero-note">
+      Trusted by creators, teams and investors building scalable content assets.
+    </div>
+  </div>
 
-.hero-actions {
-  display: flex;
-  gap: 14px;
-  margin-bottom: 16px;
-}
+  <div class="hero-demo">
+    <div class="demo-box">
+      <div class="demo-label">Example prompt</div>
+      <pre class="demo-code">
+"Create a full knowledge structure for an online portal about photography:
+• 12 categories
+• 100+ article ideas
+• beginner → expert learning path
+• SEO‑ready titles"
+      </pre>
+    </div>
 
-.hero-note {
-  font-size: 13px;
-  color: var(--muted);
-}
+    <div class="demo-box">
+      <div class="demo-label">AI‑generated result</div>
+      <pre class="demo-code">
+✓ Clear sitemap with categories
+✓ 120 article blueprints
+✓ Internal linking suggestions
+✓ Export: WordPress, Markdown, JSON
+      </pre>
+    </div>
+  </div>
+</section>
 
-.hero-demo {
-  display: grid;
-  gap: 16px;
-}
-
-.demo-box {
-  background: #ffffff;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  padding: 16px 18px;
-  box-shadow: var(--shadow-soft);
-}
-
-.demo-label {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--muted);
-  margin-bottom: 8px;
-}
-
-.demo-code {
-  font-family: ui-monospace, monospace;
-  font-size: 12px;
-  color: var(--muted);
-  white-space: pre-line;
-}
 
     <!-- FEATURES -->
     <section class="section" id="features">
