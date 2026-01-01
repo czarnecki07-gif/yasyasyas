@@ -3,10 +3,749 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yasyasyas</title>
+  <title>Yasyasyas Content Engine – AI Content Automation Platform</title>
+  <meta name="description" content="Yasyasyas Content Engine is an AI-powered content automation platform for building large-scale knowledge bases and encyclopedias.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #666666;
+      --border: #e5e5e5;
+      --primary: #2559ff;
+      --primary-soft: #eef3ff;
+      --accent: #111827;
+      --radius-lg: 16px;
+      --radius-md: 10px;
+      --radius-sm: 6px;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.13);
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 32px 16px 80px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-mark {
+      width: 28px;
+      height: 28px;
+      border-radius: 9px;
+      background: radial-gradient(circle at 10% 0%, #3b82f6 0, #111827 60%);
+    }
+
+    .logo-text {
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      font-size: 16px;
+    }
+
+    .logo-sub {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-size: 14px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.16s ease-out;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: transparent;
+      color: inherit;
+    }
+
+    .btn-outline {
+      border-color: var(--border);
+      background: #ffffff;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--text);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+      box-shadow: 0 14px 30px rgba(37, 89, 255, 0.35);
+    }
+
+    .btn-primary:hover {
+      background: #1e46cc;
+      border-color: #1e46cc;
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.25);
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 64px;
+    }
+
+    .hero-kicker {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-size: clamp(32px, 4vw, 40px);
+      line-height: 1.1;
+      margin-bottom: 16px;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-title span {
+      background: linear-gradient(120deg, #2563eb, #111827);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 460px;
+      margin-bottom: 22px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .hero-badge {
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: #ffffff;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .hero-note {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .hero-note strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .hero-demo-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      padding: 18px 18px 16px;
+      box-shadow: var(--shadow-soft);
+      font-size: 13px;
+    }
+
+    .demo-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .demo-columns {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 16px;
+    }
+
+    .demo-box {
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      padding: 12px 12px 11px;
+      background: #fafafa;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .demo-box h4 {
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--accent);
+    }
+
+    .demo-code {
+      font-family: "SF Mono", ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 11px;
+      color: var(--muted);
+      white-space: pre-line;
+    }
+
+    .demo-tag {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+    }
+
+    .demo-highlight {
+      background: var(--primary-soft);
+      border-radius: 999px;
+      padding: 3px 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      color: #1d4ed8;
+      margin-top: 10px;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    /* Features */
+    .section {
+      margin-bottom: 56px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+      font-size: 13px;
+      color: var(--muted);
+      max-width: 420px;
+    }
+
+    .section-tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .feature {
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      padding: 14px 14px 12px;
+      background: #ffffff;
+    }
+
+    .feature h3 {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .feature p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .feature span {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* Pricing */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .plan {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      padding: 16px 16px 14px;
+      background: #ffffff;
+    }
+
+    .plan.highlight {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+    }
+
+    .plan-badge {
+      position: absolute;
+      top: 10px;
+      right: 16px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #1d4ed8;
+      background: #eef2ff;
+      padding: 4px 8px;
+      border-radius: 999px;
+    }
+
+    .plan-name {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .plan-desc {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .plan-price {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .plan-price span {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .plan-limit {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .plan ul {
+      list-style: none;
+      margin-bottom: 12px;
+    }
+
+    .plan li {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .plan li::before {
+      content: "•";
+      color: #16a34a;
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    .plan .btn {
+      width: 100%;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    /* CTA */
+    .cta {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      padding: 18px 18px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      background: #fafafa;
+    }
+
+    .cta-main {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .cta-sub {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    footer {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 16px 32px;
+      font-size: 11px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      border-top: 1px solid var(--border);
+      padding-top: 18px;
+      margin-top: 32px;
+    }
+
+    footer a {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 3px;
+    }
+
+    /* Responsive */
+    @media (max-width: 880px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-demo-card {
+        order: -1;
+      }
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .features-grid,
+      .pricing-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .cta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      footer {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 24px 14px 56px;
+      }
+      header {
+        margin-bottom: 28px;
+      }
+      .hero {
+        margin-bottom: 42px;
+      }
+      .hero-demo-card {
+        padding: 14px;
+      }
+      .demo-columns {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to Yasyasyas.com!</h1>
-  <p>This is a test landing page. Everything is working perfectly.</p>
+  <main>
+    <header>
+      <div class="logo">
+        <div class="logo-mark"></div>
+        <div>
+          <div class="logo-text">Yasyasyas Content Engine</div>
+          <div class="logo-sub">AI Content Automation Platform</div>
+        </div>
+      </div>
+      <nav>
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#demo">Demo</a>
+          <a href="#pricing">Pricing</a>
+        </div>
+        <div class="nav-cta">
+          <button class="btn btn-outline">Sign in</button>
+          <button class="btn btn-primary">Start free</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="hero-kicker">AI content automation platform</div>
+        <h1 class="hero-title">
+          Build <span>large-scale knowledge engines</span> with AI, not spreadsheets.
+        </h1>
+        <p class="hero-subtitle">
+          Yasyasyas Content Engine automates your entire content pipeline — from idea and structure
+          to fully written, ready-to-publish encyclopedic content.
+        </p>
+
+        <div class="hero-badges">
+          <div class="hero-badge">From single articles to full encyclopedias</div>
+          <div class="hero-badge">Ideal for photography, music & expert portals</div>
+          <div class="hero-badge">No-code workflows, API-ready</div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary">Start free trial</button>
+          <button class="btn btn-outline">Watch 2‑minute demo</button>
+        </div>
+        <div class="hero-note">
+          <strong>Ultimate plan:</strong> Generate and manage complete encyclopedic portals with millions of words.
+        </div>
+      </div>
+
+      <div class="hero-demo-card" id="demo">
+        <div class="demo-label">Live demo · Content workflow</div>
+        <div class="demo-columns">
+          <div class="demo-box">
+            <div class="demo-tag">Input</div>
+            <h4>Prompt</h4>
+            <div class="demo-code">
+Create a full knowledge structure and content plan
+for an online encyclopedia about photography:
+
+• 12 main categories
+• 100+ subtopics
+• SEO‑ready titles
+• Learning path for beginners to experts
+            </div>
+          </div>
+          <div class="demo-box">
+            <div class="demo-tag">Output</div>
+            <h4>AI‑generated structure</h4>
+            <div class="demo-code">
+✓ 12 categories (gear, lighting, genres, editing, history...)
+✓ 128 article blueprints with key points
+✓ Suggested internal linking structure
+✓ Export: Markdown, WordPress, JSON
+            </div>
+            <div class="demo-highlight">
+              <span class="dot"></span>
+              60 seconds · No manual outlining
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section" id="features">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">Capabilities</div>
+          <h2 class="section-title">From single workflows to entire knowledge ecosystems.</h2>
+        </div>
+        <p class="section-subtitle">
+          Use Yasyasyas Content Engine to design, generate and maintain living knowledge bases —
+          from topic clusters and pillar pages to fully‑fledged encyclopedic portals.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature">
+          <h3>Structured knowledge generation</h3>
+          <p>
+            Generate complete content architectures: categories, subtopics, article blueprints,
+            internal links and learning paths for any domain.
+          </p>
+          <span>Perfect for photography, music, education and specialized knowledge portals.</span>
+        </div>
+        <div class="feature">
+          <h3>Automated content workflows</h3>
+          <p>
+            Build reusable AI workflows that go from outline to fully written, edited
+            and formatted content ready for publishing.
+          </p>
+          <span>Combine prompts, rules, tone presets and quality checks in one flow.</span>
+        </div>
+        <div class="feature">
+          <h3>Multi‑channel exports</h3>
+          <p>
+            Export content to your existing stack: CMS, docs, internal wikis or static sites
+            with a single click.
+          </p>
+          <span>WordPress, Markdown, JSON, HTML and more (API in higher plans).</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section" id="pricing">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">Plans</div>
+          <h2 class="section-title">Start small. Scale to full encyclopedias.</h2>
+        </div>
+        <p class="section-subtitle">
+          Choose a plan that fits your content ambitions. Upgrade when you are ready to build
+          large‑scale knowledge engines for your brand, clients or entire industries.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="plan">
+          <div class="plan-name">Starter</div>
+          <div class="plan-desc">For individuals testing AI‑assisted content workflows.</div>
+          <div class="plan-price">$19 <span>/ month</span></div>
+          <div class="plan-limit">Up to 20 000 AI‑generated words / month.</div>
+          <ul>
+            <li>Basic content generation workflows</li>
+            <li>Up to 10 saved workflows</li>
+            <li>Single‑user workspace</li>
+            <li>Export to Markdown & HTML</li>
+          </ul>
+          <button class="btn btn-outline">Start with Starter</button>
+        </div>
+
+        <div class="plan highlight">
+          <div class="plan-badge">Most popular</div>
+          <div class="plan-name">Pro</div>
+          <div class="plan-desc">For teams building serious content engines.</div>
+          <div class="plan-price">$79 <span>/ month</span></div>
+          <div class="plan-limit">Up to 150 000 AI‑generated words / month.</div>
+          <ul>
+            <li>Unlimited workflows & projects</li>
+            <li>Advanced templates & tone presets</li>
+            <li>Team collaboration</li>
+            <li>WordPress & CMS‑friendly exports</li>
+          </ul>
+          <button class="btn btn-primary">Start with Pro</button>
+        </div>
+
+        <div class="plan">
+          <div class="plan-name">Ultimate · Encyclopedia Builder</div>
+          <div class="plan-desc">For organizations building full encyclopedic portals.</div>
+          <div class="plan-price">Custom <span>/ month</span></div>
+          <div class="plan-limit">From 1 000 000 AI‑generated words / month and beyond.</div>
+          <ul>
+            <li>Encyclopedia‑scale content architectures</li>
+            <li>Domain‑specific knowledge models</li>
+            <li>API access & custom workflows</li>
+            <li>Priority support & onboarding</li>
+          </ul>
+          <button class="btn btn-outline">Talk to sales</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div>
+        <div class="cta-main">Ready to build your first AI‑powered knowledge engine?</div>
+        <div class="cta-sub">
+          Start with a simple workflow, or book a session to see how Yasyasyas Content Engine
+          can power full encyclopedic portals in photography, music and beyond.
+        </div>
+      </div>
+      <div class="cta-actions">
+        <button class="btn btn-primary">Start free trial</button>
+        <button class="btn btn-outline">Book a live demo</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>© <span id="year"></span> Yasyasyas Content Engine. All rights reserved.</div>
+    <div>
+      <a href="#">Terms</a> · <a href="#">Privacy</a> · <a href="#">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
