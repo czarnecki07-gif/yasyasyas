@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yasyasyas Content Engine – AI Content Automation Platform</title>
+  <meta name="description" content="Yasyasyas Content Engine automates content creation and knowledge base building across education, healthcare, law, sports, finance and more.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #101827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --primary: #2563eb;
+      --primary-soft: #eef2ff;
+      --accent: #111827;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --radius-sm: 8px;
+      --shadow-soft: 0 20px 40px rgba(15, 23, 42, 0.10);
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 32px 16px 80px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex; 
+      flex-direction: column; 
+      align-items: flex-start; 
+      gap: 4px;
+    }
+    .logo-img { 
+      height: 64px; 
+      width: auto; 
+    }
+    
+    .logo-sub {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-size: 14px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.16s ease-out;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: transparent;
+      color: inherit;
+      white-space: nowrap;
+    }
+
+    .btn-outline {
+      border-color: var(--border);
+      background: #ffffff;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--text);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+      box-shadow: 0 16px 36px rgba(37, 99, 235, 0.30);
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+      border-color: #1d4ed8;
+      transform: translateY(-1px);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.22);
+    }
+    
+section.usecases {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+/* Use cases slider — premium dark navy text */
+.usecase-label,
+.usecase-desc,
+.usecase-list,
+.usecase-list li::before,
+.usecase-title {
+  color: #0A1A2F !important;
+}
+
+    /* Hero */
+    .hero {
+      display: grid; 
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); 
+      gap: 48px; 
+      align-items: center; 
+      margin-bottom: 80px;
+    }
+
+    .hero-kicker {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 12px; 
+    }
+
+    .hero-title {
+      font-size: clamp(34px, 4vw, 44px);
+      line-height: 1.08;
+      margin-bottom: 18px;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-title span {
+      background: linear-gradient(120deg, #2563eb, #111827);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 26px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .hero-badge {
+      font-size: 12px;
+      padding: 6px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: #ffffff;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .hero-note {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .hero-demo { 
+      display: grid; 
+      gap: 16px; 
+    }
+    
+    .demo-box {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-soft);
+      }
+
+    .hero-note strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .hero-demo-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      padding: 18px 18px 16px;
+      box-shadow: var(--shadow-soft);
+      font-size: 13px;
+    }
+
+    .demo-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .demo-columns {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 16px;
+    }
+
+    .demo-box h4 {
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--accent);
+    }
+
+    .demo-code {
+      font-family: ui-monospace, monospace;      
+      font-size: 12px;
+      color: var(--muted);
+      white-space: pre-line;
+    }
+
+    .demo-tag {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+    }
+
+    .demo-highlight {
+      background: var(--primary-soft);
+      border-radius: 999px;
+      padding: 3px 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      color: #1d4ed8;
+      margin-top: 10px;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    /* Generic sections */
+    .section {
+      margin-bottom: 56px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+      font-size: 13px;
+      color: var(--muted);
+      max-width: 460px;
+    }
+
+    .section-tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    /* Features */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .feature {
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      padding: 14px 14px 12px;
+      background: #ffffff;
+    }
+
+    .feature h3 {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .feature p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .feature span {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* Who it's for */
+    .who-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .who-card {
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: #f9fafb;
+      padding: 14px 14px 12px;
+    }
+
+    .who-card h3 {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .who-card p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .who-card ul {
+      list-style: none;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .who-card li {
+      margin-bottom: 4px;
+      display: flex;
+      gap: 6px;
+    }
+
+    .who-card li::before {
+      content: "–";
+      color: var(--muted);
+    }
+
+    /* Use cases slider */
+   .usecases-wrapper {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      background: #f9fafb;
+      padding: 18px 18px 16px;
+      color: #0A1A2F;
+}
+
+
+    .usecases-inner {
+      position: relative;
+      overflow: hidden;
+      min-height: 170px;
+      margin-bottom: 16px;
+    }
+
+    .usecase-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      padding-right: 4px;
+    }
+
+    .usecase-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .usecase-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .usecase-desc {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .usecase-list {
+      list-style: none;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .usecase-list li {
+      margin-bottom: 4px;
+      display: flex;
+      gap: 6px;
+    }
+
+    .usecase-list li::before {
+      content: "·";
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    .usecase-input {
+      display: none;
+    }
+
+    .usecase-dots {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .usecase-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      cursor: pointer;
+      transition: all 0.16s ease-out;
+    }
+
+    /* Active slide */
+    #uc-1:checked ~ .usecases-inner .slide-1,
+    #uc-2:checked ~ .usecases-inner .slide-2,
+    #uc-3:checked ~ .usecases-inner .slide-3,
+    #uc-4:checked ~ .usecases-inner .slide-4,
+    #uc-5:checked ~ .usecases-inner .slide-5,
+    #uc-6:checked ~ .usecases-inner .slide-6,
+    #uc-7:checked ~ .usecases-inner .slide-7,
+    #uc-8:checked ~ .usecases-inner .slide-8,
+    #uc-9:checked ~ .usecases-inner .slide-9,
+    #uc-10:checked ~ .usecases-inner .slide-10,
+    #uc-11:checked ~ .usecases-inner .slide-11,
+    #uc-12:checked ~ .usecases-inner .slide-12,
+    #uc-13:checked ~ .usecases-inner .slide-13,
+    #uc-14:checked ~ .usecases-inner .slide-14,
+    #uc-15:checked ~ .usecases-inner .slide-15,
+    #uc-16:checked ~ .usecases-inner .slide-16,
+    #uc-17:checked ~ .usecases-inner .slide-17,
+    #uc-18:checked ~ .usecases-inner .slide-18,
+    #uc-19:checked ~ .usecases-inner .slide-19,
+    #uc-20:checked ~ .usecases-inner .slide-20,
+    #uc-21:checked ~ .usecases-inner .slide-21,
+    #uc-22:checked ~ .usecases-inner .slide-22,
+    #uc-23:checked ~ .usecases-inner .slide-23,
+    #uc-24:checked ~ .usecases-inner .slide-24 {
+      opacity: 1;
+      position: relative;
+    }
+
+    #uc-1:checked ~ .usecase-dots label[for="uc-1"],
+    #uc-2:checked ~ .usecase-dots label[for="uc-2"],
+    #uc-3:checked ~ .usecase-dots label[for="uc-3"],
+    #uc-4:checked ~ .usecase-dots label[for="uc-4"],
+    #uc-5:checked ~ .usecase-dots label[for="uc-5"],
+    #uc-6:checked ~ .usecase-dots label[for="uc-6"],
+    #uc-7:checked ~ .usecase-dots label[for="uc-7"],
+    #uc-8:checked ~ .usecase-dots label[for="uc-8"],
+    #uc-9:checked ~ .usecase-dots label[for="uc-9"],
+    #uc-10:checked ~ .usecase-dots label[for="uc-10"],
+    #uc-11:checked ~ .usecase-dots label[for="uc-11"],
+    #uc-12:checked ~ .usecase-dots label[for="uc-12"],
+    #uc-13:checked ~ .usecase-dots label[for="uc-13"],
+    #uc-14:checked ~ .usecase-dots label[for="uc-14"],
+    #uc-15:checked ~ .usecase-dots label[for="uc-15"],
+    #uc-16:checked ~ .usecase-dots label[for="uc-16"],
+    #uc-17:checked ~ .usecase-dots label[for="uc-17"],
+    #uc-18:checked ~ .usecase-dots label[for="uc-18"],
+    #uc-19:checked ~ .usecase-dots label[for="uc-19"],
+    #uc-20:checked ~ .usecase-dots label[for="uc-20"],
+    #uc-21:checked ~ .usecase-dots label[for="uc-21"],
+    #uc-22:checked ~ .usecase-dots label[for="uc-22"],
+    #uc-23:checked ~ .usecase-dots label[for="uc-23"],
+    #uc-24:checked ~ .usecase-dots label[for="uc-24"] {
+      background: var(--primary);
+      border-color: var(--primary);
+      transform: scale(1.05);
+    }
+
+    /* Why this works / Vision */
+    .why-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+      gap: 18px;
+    }
+
+    .why-card {
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      padding: 14px 14px 12px;
+      background: #ffffff;
+    }
+
+    .why-card h3 {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .why-card p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .why-card ul {
+      list-style: none;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .why-card li {
+      margin-bottom: 4px;
+      display: flex;
+      gap: 6px;
+    }
+
+    .why-card li::before {
+      content: "•";
+      color: #16a34a;
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    /* Pricing */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .plan {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      padding: 16px 16px 14px;
+      background: #ffffff;
+    }
+
+    .plan.highlight {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      background: radial-gradient(circle at top left, #eff6ff 0, #ffffff 45%);
+    }
+
+    .plan-badge {
+      position: absolute;
+      top: 10px;
+      right: 16px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #1d4ed8;
+      background: #e0ebff;
+      padding: 4px 8px;
+      border-radius: 999px;
+    }
+
+    .plan-name {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .plan-desc {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .plan-price {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .plan-price span {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .plan-limit {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .plan ul {
+      list-style: none;
+      margin-bottom: 12px;
+    }
+
+    .plan li {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .plan li::before {
+      content: "•";
+      color: #16a34a;
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    .plan .btn {
+      width: 100%;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .plan-muted-note {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    /* CTA */
+    .cta {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      padding: 18px 18px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      background: #f9fafb;
+    }
+
+    .cta-main {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .cta-sub {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    footer {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 16px 32px;
+      font-size: 11px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      border-top: 1px solid var(--border);
+      padding-top: 18px;
+      margin-top: 32px;
+    }
+
+    footer a {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 3px;
+    }
+
+    /* Responsive */
+    @media (max-width: 880px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-demo-card {
+        order: -1;
+      }
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .features-grid,
+      .pricing-grid,
+      .who-grid,
+      .why-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .cta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      footer {
+        flex-direction: column;
+      }
+      .usecases-inner {
+        min-height: 210px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 24px 14px 56px;
+      }
+      header {
+        margin-bottom: 28px;
+      }
+      .hero {
+        margin-bottom: 42px;
+      }
+      .hero-demo-card {
+        padding: 14px;
+      }
+      .demo-columns {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    .usecases {
+  margin: 100px 0;
+  text-align: center;
+}
+
+.usecases-title {
+  font-size: 28px;
+  margin-bottom: 32px;
+  letter-spacing: -0.02em;
+}
+
+.usecases-slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.usecases-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: scrollUsecases 40s linear infinite;
+}
+
+.usecase-card {
+  flex: 0 0 auto;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 14px 20px;
+  font-size: 15px;
+  color: var(--muted);
+  box-shadow: var(--shadow-soft);
+  white-space: nowrap;
+  transition: transform 0.3s ease;
+}
+
+.usecase-card:hover {
+  transform: scale(1.04);
+}
+
+@keyframes scrollUsecases {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.section-kicker {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 26px;
+  letter-spacing: -0.02em;
+  margin-bottom: 28px;
+}
+
+.features {
+  margin: 96px 0 72px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  padding: 20px 22px;
+  box-shadow: var(--shadow-soft);
+  text-align: left;
+}
+
+.feature-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.features {
+  margin: 96px 0 72px;
+  padding: 0 24px;
+}
+
+.features-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.audience {
+  margin: 96px 0 72px;
+  padding: 0 24px;
+}
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.audience-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  box-shadow: var(--shadow-soft);
+  text-align: left;
+  min-height: 200px;
+}
+
+.audience-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.audience-card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .audience-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.why {
+  margin: 160px 0 140px;
+}
+.pricing {
+  margin-top: 30px !important;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 26px;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-medium);
+}
+
+.pricing-card.popular {
+  border: 2px solid var(--accent);
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  right: 16px;
+  background: var(--accent);
+  color: #fff;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: var(--radius);
+}
+
+.pricing-name {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.pricing-price {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.pricing-price span {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.pricing-desc {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+
+.pricing-features li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.pricing-cta {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+section + .usecases {
+  margin-top: 0px !important;
+}
+.usecase-card {
+  color: #0A1A2F !important;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
+/* NEW USE CASES SLIDER — clean, premium, navy text */
+.usecases {
+  margin: 40px 0;
+}
+
+.usecases-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #0A1A2F;
+}
+
+.usecases-slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.usecases-track {
+  display: flex;
+  gap: 24px;
+  animation: scroll 28s linear infinite;
+}
+
+.usecase-card {
+  white-space: nowrap;
+  padding: 8px 16px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0A1A2F; /* PREMIUM NAVY */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+/* Smooth marquee animation */
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.usecases *::before {
+  content: none !important;
+  display: none !important;
+}
+.usecases *::after {
+  content: none !important;
+  display: none !important;
+}
+
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="logo">
+        <div class="logo-mark"></div>
+        <div>
+        <img src="/images/logo1.png" alt="YAS!YAS!YAS!" class="logo-img">          <div class="logo-sub">AI Content Automation Platform</div>
+        </div>
+      </div>
+      <nav>
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#who">Who it's for</a>
+          <a href="#use-cases">Use cases</a>
+          <a href="#pricing">Pricing</a>
+        </div>
+        <div class="nav-cta">
+          <button class="btn btn-outline">Sign in</button>
+          <button class="btn btn-primary">Start free</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-kicker">AI content automation</div>
+
+    <h1 class="hero-title">
+      Build <span>living knowledge bases</span> without complexity.
+    </h1>
+
+    <p class="hero-subtitle">
+      Yasyasyas Content Engine helps you turn ideas into structured, ready‑to‑publish content:
+      articles, guides, courses, documentation and full encyclopedias — all in one place.
+    </p>
+
+    <div class="hero-actions">
+      <button class="btn btn-primary">Start free trial</button>
+      <button class="btn btn-outline">See example projects</button>
+    </div>
+
+    <div class="hero-note">
+      Trusted by creators, teams and investors building scalable content assets.
+    </div>
+  </div>
+
+  <div class="hero-demo">
+    <div class="demo-box">
+      <div class="demo-label">Example prompt</div>
+      <pre class="demo-code">
+"Create a full knowledge structure for an online portal about photography:
+• 12 categories
+• 100+ article ideas
+• beginner → expert learning path
+• SEO‑ready titles"
+      </pre>
+    </div>
+
+    <div class="demo-box">
+      <div class="demo-label">AI‑generated result</div>
+      <pre class="demo-code">
+✓ Clear sitemap with categories
+✓ 120 article blueprints
+✓ Internal linking suggestions
+✓ Export: WordPress, Markdown, JSON
+      </pre>
+    </div>
+  </div>
+</section>
+
+<!-- NEW USE CASES SLIDER -->
+<section class="usecases">
+  <h2 class="usecases-title">Where YAS!YAS!YAS! works best</h2>
+
+  <div class="usecases-slider">
+    <div class="usecases-track">
+
+      <div class="usecase-card">Education portals</div>
+      <div class="usecase-card">Knowledge bases</div>
+      <div class="usecase-card">Coaching platforms</div>
+      <div class="usecase-card">Legal documentation hubs</div>
+      <div class="usecase-card">Content engines</div>
+      <div class="usecase-card">Resource libraries</div>
+      <div class="usecase-card">Corporate training systems</div>
+      <div class="usecase-card">Investor onboarding guides</div>
+      <div class="usecase-card">Encyclopedias</div>
+      <div class="usecase-card">Theory portals</div>
+      <div class="usecase-card">Language learning platforms</div>
+      <div class="usecase-card">Startup knowledge vaults</div>
+      <div class="usecase-card">Government information portals</div>
+      <div class="usecase-card">Onboarding systems</div>
+      <div class="usecase-card">Product documentation hubs</div>
+      <div class="usecase-card">University course builders</div>
+      <div class="usecase-card">Financial literacy engines</div>
+      <div class="usecase-card">AI prompt libraries</div>
+      <div class="usecase-card">Customer support wikis</div>
+      <div class="usecase-card">Content platforms</div>
+      <div class="usecase-card">Parenting advice hubs</div>
+      <div class="usecase-card">Expert guides</div>
+      <div class="usecase-card">Curriculum builders</div>
+      <div class="usecase-card">SaaS onboarding flows</div>
+
+      <!-- duplicate for infinite scroll -->
+      <div class="usecase-card">Education portals</div>
+      <div class="usecase-card">Knowledge bases</div>
+      <div class="usecase-card">Coaching platforms</div>
+      <div class="usecase-card">Legal documentation hubs</div>
+      <div class="usecase-card">Content engines</div>
+      <div class="usecase-card">Resource libraries</div>
+      <div class="usecase-card">Corporate training systems</div>
+      <div class="usecase-card">Investor onboarding guides</div>
+      <div class="usecase-card">Encyclopedias</div>
+      <div class="usecase-card">Theory portals</div>
+      <div class="usecase-card">Language learning platforms</div>
+      <div class="usecase-card">Startup knowledge vaults</div>
+      <div class="usecase-card">Government information portals</div>
+      <div class="usecase-card">Onboarding systems</div>
+      <div class="usecase-card">Product documentation hubs</div>
+      <div class="usecase-card">University course builders</div>
+      <div class="usecase-card">Financial literacy engines</div>
+      <div class="usecase-card">AI prompt libraries</div>
+      <div class="usecase-card">Customer support wikis</div>
+      <div class="usecase-card">Content platforms</div>
+      <div class="usecase-card">Parenting advice hubs</div>
+      <div class="usecase-card">Expert guides</div>
+      <div class="usecase-card">Curriculum builders</div>
+      <div class="usecase-card">SaaS onboarding flows</div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+/* NEW CLEAN SLIDER */
+.usecases {
+  margin: 40px 0;
+}
+
+.usecases-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #0A1A2F;
+}
+
+.usecases-slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.usecases-track {
+  display: flex;
+  gap: 24px;
+  animation: scroll 28s linear infinite;
+}
+
+.usecase-card {
+  white-space: nowrap;
+  padding: 8px 16px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0A1A2F; /* PREMIUM NAVY */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+/* Smooth marquee animation */
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+</style>
+
+
+<section id="pricing" class="pricing">
+  <div class="section-kicker">Pricing</div>
+  <h2 class="section-title">Simple pricing. No surprises.</h2>
+
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <h3 class="pricing-name">Starter</h3>
+      <div class="pricing-price">$19<span>/month</span></div>
+      <p class="pricing-desc">Everything you need to build structured content engines.</p>
+
+      <ul class="pricing-features">
+        <li>Unlimited content generation</li>
+        <li>Full structure planning</li>
+        <li>Exports: Markdown, HTML, JSON</li>
+        <li>Your tone of voice</li>
+        <li>All use cases included</li>
+      </ul>
+
+      <a href="#" class="pricing-cta">Start now</a>
+    </div>
+
+    <div class="pricing-card popular">
+      <div class="badge">Most popular</div>
+      <h3 class="pricing-name">Pro</h3>
+      <div class="pricing-price">$49<span>/month</span></div>
+      <p class="pricing-desc">For creators, teams and companies building serious content systems.</p>
+
+      <ul class="pricing-features">
+        <li>Everything in Starter</li>
+        <li>Advanced exports (CMS, API)</li>
+        <li>Team collaboration</li>
+        <li>Custom templates</li>
+        <li>Priority support</li>
+      </ul>
+
+      <a href="#" class="pricing-cta">Upgrade to Pro</a>
+    </div>
+
+    <div class="pricing-card">
+      <h3 class="pricing-name">Enterprise</h3>
+      <div class="pricing-price">Custom</div>
+      <p class="pricing-desc">For platforms, publishers and investors building large-scale engines.</p>
+
+      <ul class="pricing-features">
+        <li>Custom integrations</li>
+        <li>Dedicated infrastructure</li>
+        <li>Private models</li>
+        <li>White-label options</li>
+        <li>Strategic support</li>
+      </ul>
+
+      <a href="#" class="pricing-cta">Contact sales</a>
+    </div>
+  </div>
+</section>
+
+    <!-- FEATURES -->
+    <section class="features" id="features">
+  <div class="section-kicker">What it does</div>
+  <h2 class="section-title">Everything you need to turn content into a system</h2>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <h3>Plan the knowledge</h3>
+      <p>
+        Ask for a topic and get a full structure: sections, subpages, article ideas, learning paths and cross-links.
+        Perfect for portals, courses, academies and documentation.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Generate the content</h3>
+      <p>
+        Turn outlines into ready-to-edit drafts in your tone of voice, with consistent structure and style.
+        From short explainers to long-form guides and encyclopedic entries.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Publish where you work</h3>
+      <p>
+        Export everything to your tools: CMS, docs, wikis or static sites — without copy-paste chaos.
+        WordPress, Markdown, HTML, JSON and more (API in higher plans).
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="audience">
+  <div class="section-kicker">Who it's for</div>
+  <h2 class="section-title">Simple enough for creators. Strong enough for investors.</h2>
+
+  <div class="audience-grid">
+    <div class="audience-card">
+      <h3>Creators & educators</h3>
+      <p>
+        For people who want to publish more without burning out.  
+        Build courses, guides, portals and structured knowledge — faster than ever.
+      </p>
+    </div>
+
+    <div class="audience-card">
+      <h3>Teams & companies</h3>
+      <p>
+        For teams that need one place for content.  
+        Documentation, onboarding, training, support articles — all consistent and always up to date.
+      </p>
+    </div>
+
+    <div class="audience-card">
+      <h3>Platforms & investors</h3>
+      <p>
+        For people who think in terms of assets, multiples and scalability.  
+        Build content engines that grow in value and can be licensed or sold.
+      </p>
+    </div>
+  </div>
+</section>
+
+    <!-- WHO IT'S FOR -->
+    <section class="section" id="who">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">Who it's for</div>
+          <h2 class="section-title">Simple enough for creators. Strong enough for investors.</h2>
+        </div>
+        <p class="section-subtitle">
+          Yasyasyas Content Engine is built for people who think in knowledge, not just posts:
+          solo creators, small teams and organizations building serious content assets.
+        </p>
+      </div>
+
+      <div class="who-grid">
+        <div class="who-card">
+          <h3>Creators & educators</h3>
+          <p>For people who want to publish more, without burning out on planning and structure.</p>
+          <ul>
+            <li>Online courses and academies</li>
+            <li>Expert blogs and newsletters</li>
+            <li>Educational portals for schools and NGOs</li>
+          </ul>
+        </div>
+        <div class="who-card">
+          <h3>Teams & companies</h3>
+          <p>For teams that need one place for content, documentation and reusable knowledge.</p>
+          <ul>
+            <li>Marketing and content teams</li>
+            <li>Product and support documentation</li>
+            <li>Internal knowledge bases and playbooks</li>
+          </ul>
+        </div>
+        <div class="who-card">
+          <h3>Platforms & investors</h3>
+          <p>For people who think in terms of assets, multiples and scalable infrastructure.</p>
+          <ul>
+            <li>AI‑powered vertical portals and SaaS add‑ons</li>
+            <li>White‑label knowledge engines for industries</li>
+            <li>Recurring revenue from content automation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+<section class="why">
+  <div class="section-kicker">Why this works</div>
+  <h2 class="section-title">A smarter way to build structured content</h2>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <h3>1. Structure first, content second</h3>
+      <p>
+        Most tools generate text blindly.  
+        Yasyasyas starts with architecture — categories, subpages, learning paths, cross‑links.  
+        Thanks to that, everything stays consistent and scalable.
+      </p>
+    </div>
+
+    <div class="why-card">
+      <h3>2. One engine for many formats</h3>
+      <p>
+        Articles, guides, courses, documentation, onboarding, knowledge bases —  
+        all generated from the same structured source.  
+        No more rewriting the same content in 10 places.
+      </p>
+    </div>
+
+    <div class="why-card">
+      <h3>3. Built for long‑term value</h3>
+      <p>
+        Content becomes an asset: organized, reusable, exportable, and easy to maintain.  
+        Perfect for creators, teams, and investors who think in terms of scale.
+      </p>
+    </div>
+  </div>
+</section>
+
+    <!-- USE CASES SLIDER -->
+<section id="use-cases" class="usecases-expanded">
+  <div class="section-kicker">Use cases</div>
+  <h2 class="section-title">One engine. Content for almost any field.</h2>
+
+  <div class="usecases-grid">
+    <div class="usecase-box">
+      <h3>Education</h3>
+      <p>Courses, portals and school content. Subject maps, lesson paths, LMS exports.</p>
+    </div>
+    <div class="usecase-box">
+      <h3>Healthcare</h3>
+      <p>Medical guides, symptom explainers, patient onboarding, internal protocols.</p>
+    </div>
+    <div class="usecase-box">
+      <h3>Sport</h3>
+      <p>Training plans, technique breakdowns, coaching portals, performance tracking.</p>
+    </div>
+    <div class="usecase-box">
+      <h3>Law</h3>
+      <p>Legal explainers, documentation hubs, compliance guides, internal knowledge bases.</p>
+    </div>
+    <div class="usecase-box">
+      <h3>Travel</h3>
+      <p>Destination guides, itineraries, local tips, tourism content platforms.</p>
+    </div>
+    <div class="usecase-box">
+      <h3>Art & music</h3>
+      <p>Theory portals, technique explainers, course builders, creative encyclopedias.</p>
+    </div>
+    <div class="usecase-box">
+      <h3>Finance</h3>
+      <p>Investor onboarding, financial literacy hubs, product explainers, compliance docs.</p>
+    </div>
+    <div class="usecase-box">
+      <h3>Technology</h3>
+      <p>Product documentation, developer wikis, SaaS onboarding, API explainers.</p>
+    </div>
+  </div>
+</section>
