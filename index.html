@@ -1064,6 +1064,10 @@ section + .usecases {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
+.usecases *::before {
+  content: none !important;
+  display: none !important;
+}
 
   </style>
 </head>
