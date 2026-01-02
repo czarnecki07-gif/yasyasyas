@@ -1024,6 +1024,46 @@ section + .usecases {
   font-weight: 600;
   text-shadow: 0 1px 2px rgba(0,0,0,0.06);
 }
+/* NEW USE CASES SLIDER — clean, premium, navy text */
+.usecases {
+  margin: 40px 0;
+}
+
+.usecases-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #0A1A2F;
+}
+
+.usecases-slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.usecases-track {
+  display: flex;
+  gap: 24px;
+  animation: scroll 28s linear infinite;
+}
+
+.usecase-card {
+  white-space: nowrap;
+  padding: 8px 16px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0A1A2F; /* PREMIUM NAVY */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+/* Smooth marquee animation */
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
 
   </style>
 </head>
@@ -1101,6 +1141,9 @@ section + .usecases {
 <section class="usecases">
   <h2 class="usecases-title">Where YAS!YAS!YAS! works best</h2>
 
+ <section class="usecases">
+  <h2 class="usecases-title">Where YAS!YAS!YAS! works best</h2>
+
   <div class="usecases-slider">
     <div class="usecases-track">
       <div class="usecase-card">Education portals</div>
@@ -1128,7 +1171,7 @@ section + .usecases {
       <div class="usecase-card">Coding curriculum builders</div>
       <div class="usecase-card">SaaS onboarding flows</div>
 
-      <!-- duplikat dla płynnej animacji -->
+      <!-- duplicate for infinite scroll -->
       <div class="usecase-card">Education portals</div>
       <div class="usecase-card">Healthcare knowledge bases</div>
       <div class="usecase-card">Sports coaching platforms</div>
@@ -1156,6 +1199,7 @@ section + .usecases {
     </div>
   </div>
 </section>
+
 <section id="pricing" class="pricing">
   <div class="section-kicker">Pricing</div>
   <h2 class="section-title">Simple pricing. No surprises.</h2>
