@@ -104,7 +104,12 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     }
 
-    .module-icon { font-size: 36px; }
+    .module-icon svg {
+      width: 36px;
+      height: 36px;
+      stroke: #0A1A2F;
+    }
+
     .module-name { font-size: 18px; font-weight: 700; color: #0A1A2F; }
     .module-desc { font-size: 14px; color: #4b5563; flex-grow: 1; }
 
@@ -159,7 +164,7 @@
 
     <header>
       <div class="logo">
-        <img src="images/logo-new.png" class="logo-img">
+        <img src="images/logo1.png" class="logo-img" alt="Yasyasyas logo">
         <div class="logo-sub">AI Content Automation Platform</div>
       </div>
 
@@ -180,144 +185,248 @@
 
       <div class="modules-grid">
 
-        <!-- MODULES (24 ready) -->
-      <div class="module-card">
-  <div class="module-icon">📚</div>
-  <h3 class="module-name">Encyclopedia Builder</h3>
-  <p class="module-desc">Generate a full encyclopedia for any domain with categories and entries.</p>
-  <span class="module-plan plan-pro">Pro</span>
-  <a href="/login" class="module-btn">Open tool</a>
-</div>
+        <!-- 16 MODULES WITH INLINE SVG ICONS -->
 
-<div class="module-card">
-  <div class="module-icon">🎓</div>
-  <h3 class="module-name">Course Builder</h3>
-  <p class="module-desc">Create complete online courses with lessons, quizzes and exports.</p>
-  <span class="module-plan plan-pro">Pro</span>
-  <a href="/login" class="module-btn">Open tool</a>
-</div>
+        <!-- 1 -->
+        <div class="module-card">
+          <div class="module-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M4 4.5A2.5 2.5 0 0 1 6.5 7H20"/>
+              <path d="M6.5 7v10"/>
+              <path d="M20 7v10"/>
+            </svg>
+          </div>
+          <h3 class="module-name">Encyclopedia Builder</h3>
+          <p class="module-desc">Generate a full encyclopedia for any domain with categories and entries.</p>
+          <span class="module-plan plan-pro">Pro</span>
+          <a href="/login" class="module-btn">Open tool</a>
+        </div>
 
-<div class="module-card">
-  <div class="module-icon">🌐</div>
-  <h3 class="module-name">Website Generator</h3>
-  <p class="module-desc">Generate full websites with content, layout and images.</p>
-  <span class="module-plan plan-enterprise">Enterprise</span>
-  <a href="/login" class="module-btn">Open tool</a>
-</div>
+        <!-- 2 -->
+        <div class="module-card">
+          <div class="module-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 7L12 12 2 7l10-5 10 5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M12 12v10"/>
+            </svg>
+          </div>
+          <h3 class="module-name">Course Builder</h3>
+          <p class="module-desc">Create complete online courses with lessons, quizzes and exports.</p>
+          <span class="module-plan plan-pro">Pro</span>
+          <a href="/login" class="module-btn">Open tool</a>
+        </div>
 
-<div class="module-card">
-<div class="module-icon">✍️</div>
-  <h3 class="module-name">Book Writer</h3>
-  <p class="module-desc">Write books, chapters, outlines and summaries in any language.</p>
-  <span class="module-plan plan-pro">Pro</span>
-  <a href="/login" class="module-btn">Open tool</a>
-</div>
+        <!-- 3 -->
+        <div class="module-card">
+          <div class="module-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M2 12h20"/>
+              <path d="M12 2a15 15 0 0 1 0 20"/>
+              <path d="M12 2a15 15 0 0 0 0 20"/>
+            </svg>
+          </div>
+          <h3 class="module-name">Website Generator</h3>
+          <p class="module-desc">Generate full websites with content, layout and images.</p>
+          <span class="module-plan plan-enterprise">Enterprise</span>
+          <a href="/login" class="module-btn">Open tool</a>
+        </div>
 
-<div class="module-card">
-  <div class="module-icon">📖</div>
-  <h3 class="module-name">Knowledge Base Maker</h3>
-  <p class="module-desc">Build complete knowledge bases and internal wikis.</p>
-  <span class="module-plan plan-free">Free</span>
-  <a href="/login" class="module-btn">Open tool</a>
-</div>
+        <!-- 4 -->
+        <div class="module-card">
+          <div class="module-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"/>
+              <path d="M6.5 17V6.5A2.5 2.5 0 0 1 9 4h11"/>
+            </svg>
+          </div>
+          <h3 class="module-name">Book Writer</h3>
+          <p class="module-desc">Write books, chapters, outlines and summaries in any language.</p>
+          <span class="module-plan plan-pro">Pro</span>
+          <a href="/login" class="module-btn">Open tool</a>
+        </div>
 
-<div class="module-card">
-  <div class="module-icon">🛠️</div>
-  <h3 class="module-name">Documentation Generator</h3>
-  <p class="module-desc">Generate product documentation, API guides and onboarding manuals.</p>
-  <span class="module-plan plan-pro">Pro</span>
-  <a href="/login" class="module-btn">Open tool</a>
-</div>
+        <!-- 5 -->
+        <div class="module-card">
+          <div class="module-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M4 4.5A2.5 2.5 0 0 1 6.5 7H20"/>
+              <path d="M6.5 7v10"/>
+              <path d="M20 7v10"/>
+            </svg>
+          </div>
+          <h3 class="module-name">Knowledge Base Maker</h3>
+          <p class="module-desc">Build complete knowledge bases and internal wikis.</p>
+          <span class="module-plan plan-free">Free</span>
+          <a href="/login" class="module-btn">Open tool</a>
+        </div>
 
-<div class="module-card">
-  <div class="module-icon">📣</div>
-  <h3 class="module-name">Marketing Suite</h3>
-  <p class="module-desc">Create posts, ads, newsletters and landing page copy.</p>
-  <span class="module-plan plan-free">Free</span>
-  <a href="/login" class="module-btn">Open tool</a>
-</div>
+        <!-- 6 -->
+        <div class="module-card">
+          <div class="module-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <path d="M14 2v6h6"/>
+              <path d="M10 13h4"/>
+              <path d="M10 17h4"/>
+            </svg>
+          </div>
+          <h3 class="module-name">Documentation Generator</h3>
+          <p class="module-desc">Generate product documentation, API guides and onboarding manuals.</p>
+          <span class="module-plan plan-pro">Pro</span>
+          <a href="/login" class="module-btn">Open tool</a>
+        </div>
 
-<div class="module-card">
-  <div class="module-icon">🔍</div>
-  <h3 class="module-name">SEO Engine</h3>
-  <p class="module-desc">Generate SEO clusters, articles, meta tags and topical maps.</p>
-  <span class="module-plan plan-pro">Pro</span>
-  <a href="/login" class="module-btn">Open tool</a>
-</div>
+        <!-- 7 -->
+        <div class="module-card">
+          <div class="module-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 11l18-5v12l-18-5v8h3"/>
+              <path d="M6 14v7"/>
+            </svg>
+          </div>
+          <h3 class="module-name">Marketing Suite</h3>
+          <p class="module-desc">Create posts, ads, newsletters and landing page copy.</p>
+          <span class="module-plan plan-free">Free</span>
+          <a href="/login" class="module-btn">Open tool</a>
+        </div>
 
-<div class="module-card">
-  <div class="module-icon">🎨</div>
-  <h3 class="module-name">Image Generator</h3>
-  <p class="module-desc">Create images, illustrations and graphics for your content.</p>
-  <span class="module-plan plan-free">Free</span>
-  <a href="/login" class="module-btn">Open tool</a>
-</div>
+        <!-- 8 -->
+        <div class="module-card">
+          <div class="module-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="M21 21l-4.3-4.3"/>
+            </svg>
+          </div>
+          <h3 class="module-name">SEO Engine</h3>
+          <p class="module-desc">Generate SEO clusters, articles, meta tags and topical maps.</p>
+          <span class="module-plan plan-pro">Pro</span>
+          <a href="/login" class="module-btn">Open tool</a>
+        </div>
 
-<div class="module-card">
-  <div class="module-icon">🎬</div>
-  <h3 class="module-name">Video & Animation Studio</h3>
-  <p class="module-desc">Generate scripts, storyboards and narration for videos.</p>
-  <span class="module-plan plan-enterprise">Enterprise</span>
-  <a href="/login" class="module-btn">Open tool</a>
-</div>
+        <!-- 9 -->
+        <div class="module-card">
+          <div class="module-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <circle cx="8.5" cy="8.5" r="2.5"/>
+              <path d="M21 15l-5-5L5 21"/>
+            </svg>
+          </div>
+          <h3 class="module-name">Image Generator</h3>
+          <p class="module-desc">Create images, illustrations and graphics for your content.</p>
+          <span class="module-plan plan-free">Free</span>
+          <a href="/login" class="module-btn">Open tool</a>
+        </div>
 
-<div class="module-card">
-  <div class="module-icon">📰</div>
-  <h3 class="module-name">Portal Builder</h3>
-  <p class="module-desc">Create full thematic portals with articles and structure.</p>
-  <span class="module-plan plan-pro">Pro</span>
-  <a href="/login" class="module-btn">Open tool</a>
-</div>
+        <!-- 10 -->
+        <div class="module-card">
+          <div class="module-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="6" width="14" height="12" rx="2"/>
+              <path d="M22 8l-6 4 6 4V8z"/>
+            </svg>
+          </div>
+          <h3 class="module-name">Video & Animation Studio</h3>
+          <p class="module-desc">Generate scripts, storyboards and narration for videos.</p>
+          <span class="module-plan plan-enterprise">Enterprise</span>
+          <a href="/login" class="module-btn">Open tool</a>
+        </div>
 
+        <!-- 11 -->
+        <div class="module-card">
+          <div class="module-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="16" rx="2"/>
+              <path d="M7 8h10"/>
+              <path d="M7 12h10"/>
+              <path d="M7 16h6"/>
+            </svg>
+          </div>
+          <h3 class="module-name">Portal Builder</h3>
+          <p class="module-desc">Create full thematic portals with articles and structure.</p>
+          <span class="module-plan plan-pro">Pro</span>
+          <a href="/login" class="module-btn">Open tool</a>
+        </div>
+
+       <!-- 12 -->
 <div class="module-card">
-  <div class="module-icon">📘</div>
+  <div class="module-icon">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"/>
+      <path d="M9 8h6"/>
+      <path d="M9 12h6"/>
+      <path d="M9 16h4"/>
+    </svg>
+  </div>
   <h3 class="module-name">Curriculum Designer</h3>
   <p class="module-desc">Design educational programs, modules and learning paths.</p>
   <span class="module-plan plan-pro">Pro</span>
   <a href="/login" class="module-btn">Open tool</a>
 </div>
 
+<!-- 13 -->
 <div class="module-card">
-  <div class="module-icon">🎤</div>
+  <div class="module-icon">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="9" y="2" width="6" height="12" rx="3"/>
+      <path d="M5 10v2a7 7 0 0 0 14 0v-2"/>
+      <path d="M12 18v4"/>
+      <path d="M8 22h8"/>
+    </svg>
+  </div>
   <h3 class="module-name">Audio Studio</h3>
   <p class="module-desc">Generate voice recordings from text, ideas or your own voice samples.</p>
   <span class="module-plan plan-pro">Pro</span>
   <a href="/login" class="module-btn">Open tool</a>
 </div>
 
+<!-- 14 -->
 <div class="module-card">
-  <div class="module-icon">🏛️</div>
+  <div class="module-icon">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 22h18"/>
+      <path d="M6 22V12h12v10"/>
+      <path d="M12 2l9 6H3z"/>
+    </svg>
+  </div>
   <h3 class="module-name">Architect Visualizer</h3>
   <p class="module-desc">Create building visualizations based on dimensions, style and functional requirements.</p>
   <span class="module-plan plan-enterprise">Enterprise</span>
   <a href="/login" class="module-btn">Open tool</a>
 </div>
 
+<!-- 15 -->
 <div class="module-card">
-  <div class="module-icon">💼</div>
+  <div class="module-icon">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="7" width="18" height="14" rx="2"/>
+      <path d="M8 7V5a4 4 0 0 1 8 0v2"/>
+    </svg>
+  </div>
   <h3 class="module-name">Small Business Assistant</h3>
   <p class="module-desc">Generate documents, offers, procedures and marketing plans for small businesses.</p>
   <span class="module-plan plan-free">Free</span>
   <a href="/login" class="module-btn">Open tool</a>
 </div>
 
+<!-- 16 -->
 <div class="module-card">
-  <div class="module-icon">👨‍👩‍👧‍👦</div>
+  <div class="module-icon">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="9" cy="7" r="3"/>
+      <circle cx="17" cy="7" r="3"/>
+      <path d="M2 22v-2a6 6 0 0 1 12 0v2"/>
+      <path d="M14 22v-2a6 6 0 0 1 8 0v2"/>
+    </svg>
+  </div>
   <h3 class="module-name">Family Life Assistant</h3>
   <p class="module-desc">Create schedules, meal plans, budgets and guides to support family life.</p>
   <span class="module-plan plan-free">Free</span>
   <a href="/login" class="module-btn">Open tool</a>
 </div>
 
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div>© 2026 Yasyasyas</div>
-    <div><a href="/privacy">Privacy</a> • <a href="/terms">Terms</a></div>
-  </footer>
-
-</body>
-</html>
