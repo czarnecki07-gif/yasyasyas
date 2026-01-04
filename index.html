@@ -1,85 +1,272 @@
-<!-- ===== YASYASYAS — ABOVE THE FOLD LAYOUT ===== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YASYASYAS — AI Tools for Everyone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<section id="hero">
+    <!-- HERO SECTION (ABOVE THE FOLD) -->
+    <section id="hero" class="section hero-section">
 
-    <!-- TOP ICON BAR: FREE + PREMIUM TOOLS -->
-    <div class="tools-bar">
+        <!-- TOP ICON BAR: FREE + PREMIUM TOOLS -->
+        <div class="tools-bar">
 
-        <!-- FREE TOOLS -->
-        <div class="tools-group free-tools">
-            <a href="#" class="tool-icon">Text Editor</a>
-            <a href="#" class="tool-icon">Translator</a>
-            <a href="#" class="tool-icon">Summarizer</a>
-            <a href="#" class="tool-icon">Image Gen</a>
-            <a href="#" class="tool-icon">Image Edit</a>
-            <a href="#" class="tool-icon">Checklist</a>
+            <!-- FREE TOOLS -->
+            <div class="tools-group free-tools">
+                <button class="tool-icon">
+                    <img src="icons/free-text-editor.svg" alt="Text Editor">
+                    <span>Text Editor</span>
+                </button>
+                <button class="tool-icon">
+                    <img src="icons/free-translator.svg" alt="Translator">
+                    <span>Translator</span>
+                </button>
+                <button class="tool-icon">
+                    <img src="icons/free-summarizer.svg" alt="Summarizer">
+                    <span>Summarizer</span>
+                </button>
+                <button class="tool-icon">
+                    <img src="icons/free-image-gen.svg" alt="Image Generator">
+                    <span>Image Gen</span>
+                </button>
+                <button class="tool-icon">
+                    <img src="icons/free-image-edit.svg" alt="Image Editor">
+                    <span>Image Edit</span>
+                </button>
+                <button class="tool-icon">
+                    <img src="icons/free-checklist.svg" alt="Checklist Builder">
+                    <span>Checklist</span>
+                </button>
+            </div>
+
+            <!-- PREMIUM TOOLS -->
+            <div class="tools-group premium-tools">
+                <button class="tool-icon">
+                    <img src="icons/premium-marketing.svg" alt="Marketing Suite">
+                    <span>Marketing Suite</span>
+                </button>
+                <button class="tool-icon">
+                    <img src="icons/premium-smallbiz.svg" alt="Small Business Assistant">
+                    <span>Small Biz Assistant</span>
+                </button>
+                <button class="tool-icon">
+                    <img src="icons/premium-family.svg" alt="Family Life Assistant">
+                    <span>Family Assistant</span>
+                </button>
+                <button class="tool-icon">
+                    <img src="icons/premium-workflow.svg" alt="AI Workflow Builder">
+                    <span>Workflow Builder</span>
+                </button>
+                <button class="tool-icon">
+                    <img src="icons/premium-prompt.svg" alt="Prompt Generator Pro">
+                    <span>Prompt Pro</span>
+                </button>
+            </div>
+
         </div>
 
-        <!-- PREMIUM TOOLS -->
-        <div class="tools-group premium-tools">
-            <a href="#" class="tool-icon">Marketing Suite</a>
-            <a href="#" class="tool-icon">Small Biz Assistant</a>
-            <a href="#" class="tool-icon">Family Assistant</a>
-            <a href="#" class="tool-icon">Workflow Builder</a>
-            <a href="#" class="tool-icon">Prompt Pro</a>
+        <!-- MAIN SEARCH AREA -->
+        <div class="search-area">
+            <h1 class="hero-title">AI Tools for Everyone</h1>
+
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    placeholder="Search AI tools, workflows, assistants…"
+                />
+            </div>
+
+            <div class="search-tags">
+                <span>Writing</span>
+                <span>Image</span>
+                <span>Video</span>
+                <span>Coding</span>
+                <span>Business</span>
+                <span>Productivity</span>
+                <span>Audio</span>
+                <span>Marketing</span>
+                <span>Education</span>
+            </div>
         </div>
 
-    </div>
+        <!-- ALLFABET GROUP CARDS -->
+        <div class="platform-cards">
 
+            <a href="#" class="platform-card">
+                <div class="platform-icon">
+                    <img src="icons/qwriting.svg" alt="QWRITING">
+                </div>
+                <h3>QWRITING</h3>
+                <p>AI Writing Tools & Content Engine</p>
+            </a>
 
-    <!-- MAIN SEARCH BAR -->
-    <div class="search-area">
-        <h1>AI Tools for Everyone</h1>
+            <a href="#" class="platform-card">
+                <div class="platform-icon">
+                    <img src="icons/quwert.svg" alt="QUWERT">
+                </div>
+                <h3>QUWERT</h3>
+                <p>AI for Law, Education & Public Sector</p>
+            </a>
 
-        <input 
-            type="text" 
-            class="search-input" 
-            placeholder="Search AI tools, workflows, assistants…"
-        />
+            <a href="#" class="platform-card">
+                <div class="platform-icon">
+                    <img src="icons/qvart.svg" alt="QVART">
+                </div>
+                <h3>QVART</h3>
+                <p>AI for Design & Visual Workflows</p>
+            </a>
 
-        <div class="search-tags">
-            <span>Writing</span>
-            <span>Image</span>
-            <span>Video</span>
-            <span>Coding</span>
-            <span>Business</span>
-            <span>Productivity</span>
-            <span>Audio</span>
-            <span>Marketing</span>
-            <span>Education</span>
+            <a href="#" class="platform-card">
+                <div class="platform-icon">
+                    <img src="icons/qbiz.svg" alt="QBIZ">
+                </div>
+                <h3>QBIZ</h3>
+                <p>AI Tools for Business & SaaS Automation</p>
+            </a>
+
         </div>
-    </div>
 
+        <!-- MICRO DESCRIPTION -->
+        <p class="micro-description">
+            Your AI Tools Hub + Content Engine — everything you need to create, automate and grow.
+        </p>
 
-    <!-- ALLFABET GROUP CARDS -->
-    <div class="platform-cards">
+    </section>
 
-        <a href="#" class="platform-card">
-            <h3>QWRITING</h3>
-            <p>AI Writing Tools & Content Engine</p>
-        </a>
+    <!-- BELOW THE FOLD -->
+    <section id="below" class="section below-section">
 
-        <a href="#" class="platform-card">
-            <h3>QUWERT</h3>
-            <p>AI for Law, Education & Public Sector</p>
-        </a>
+        <!-- FEATURED TOOLS -->
+        <div class="block">
+            <div class="block-header">
+                <h2>Featured AI Tools</h2>
+                <p>Hand‑picked tools to start faster.</p>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>AI Blog Writer</h3>
+                    <p>Generate full blog posts from simple prompts.</p>
+                    <span class="tool-tag">Writing</span>
+                </div>
+                <div class="tool-card">
+                    <h3>Product Description Generator</h3>
+                    <p>Create clear, engaging product copy in seconds.</p>
+                    <span class="tool-tag">E‑commerce</span>
+                </div>
+                <div class="tool-card">
+                    <h3>Meeting Notes Summarizer</h3>
+                    <p>Turn raw notes into clean action lists.</p>
+                    <span class="tool-tag">Productivity</span>
+                </div>
+                <div class="tool-card">
+                    <h3>Social Media Caption Helper</h3>
+                    <p>Quick ideas for posts, captions and hooks.</p>
+                    <span class="tool-tag">Marketing</span>
+                </div>
+            </div>
+        </div>
 
-        <a href="#" class="platform-card">
-            <h3>QVART</h3>
-            <p>AI for Design & Visual Workflows</p>
-        </a>
+        <!-- RANKINGS -->
+        <div class="block">
+            <div class="block-header">
+                <h2>Top AI Rankings</h2>
+                <p>Discover the best tools by category.</p>
+            </div>
+            <div class="rankings-grid">
+                <div class="ranking-card">
+                    <h3>Best AI Writing Tools</h3>
+                    <ul>
+                        <li>QWRITING</li>
+                        <li>AI Blog Writer</li>
+                        <li>Script Assistant</li>
+                    </ul>
+                </div>
+                <div class="ranking-card">
+                    <h3>Best AI Image Tools</h3>
+                    <ul>
+                        <li>Image Gen (basic)</li>
+                        <li>Style Transfer</li>
+                        <li>Background Remover</li>
+                    </ul>
+                </div>
+                <div class="ranking-card">
+                    <h3>Best AI Tools for Business</h3>
+                    <ul>
+                        <li>QBIZ</li>
+                        <li>Invoice Assistant</li>
+                        <li>Client Email Writer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-        <a href="#" class="platform-card">
-            <h3>QBIZ</h3>
-            <p>AI Tools for Business & SaaS Automation</p>
-        </a>
+        <!-- CONTENT ENGINE SECTION -->
+        <div class="block">
+            <div class="block-header">
+                <h2>Content Engine</h2>
+                <p>Modular workflows to create, repurpose and automate content.</p>
+            </div>
+            <div class="engine-grid">
+                <div class="engine-module">
+                    <h3>Idea → Outline</h3>
+                    <p>Turn a simple idea into a structured outline.</p>
+                </div>
+                <div class="engine-module">
+                    <h3>Outline → Article</h3>
+                    <p>Expand outlines into full articles in one click.</p>
+                </div>
+                <div class="engine-module">
+                    <h3>Article → Social Posts</h3>
+                    <p>Create multiple posts from one long‑form piece.</p>
+                </div>
+                <div class="engine-module">
+                    <h3>Article → Newsletter</h3>
+                    <p>Convert content into clean, readable email newsletters.</p>
+                </div>
+            </div>
+        </div>
 
-    </div>
+        <!-- SIMPLE CTA / NEWSLETTER -->
+        <div class="block cta-block">
+            <div class="cta-inner">
+                <h2>Stay ahead with new AI tools</h2>
+                <p>Get occasional updates with new tools, workflows and templates.</p>
+                <form class="cta-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Notify me</button>
+                </form>
+            </div>
+        </div>
 
+    </section>
 
-    <!-- MICRO DESCRIPTION -->
-    <p class="micro-description">
-        Your AI Tools Hub + Content Engine — everything you need to create, automate and grow.
-    </p>
+    <!-- FOOTER -->
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <p class="footer-brand">YASYASYAS — AI Tools for Everyone</p>
+                <p class="footer-sub">Part of Allfabet Group.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+            <div class="footer-lang">
+                <label for="lang-select">Language</label>
+                <select id="lang-select" name="language">
+                    <option value="en">English</option>
+                    <option value="pl">Polski</option>
+                    <!-- kolejne języki później -->
+                </select>
+            </div>
+        </div>
+    </footer>
 
-</section>
+</body>
+</html>
